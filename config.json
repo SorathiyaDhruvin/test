@@ -1,0 +1,164 @@
+{
+    "default": {
+        "firstScene": "scene1",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "compass": false
+    },
+    "scenes": {
+        "scene1": {
+            "title": "IOS TRANING CENTER \n DATA CENTER",
+            "panorama": "assets/360/image1.jpeg",
+            "hfov": 110,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 180,
+                    "cssClass": "nav-btn",
+                    "text": "Go Back",
+                    "createTooltipArgs": "⬆",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene2"
+                    }
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 160,
+                    "cssClass": "nav-btn",
+                    "text": "Go Left",
+                    "createTooltipArgs": "⬅",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene8"
+                    }
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 0,
+                    "cssClass": "nav-btn",
+                    "text": "Go Right",
+                    "createTooltipArgs": "➡",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene4"
+                    }
+                }
+            ]
+        },
+        "scene2": {
+            "title": "L-108 \n NETWORK ARCHITECTURE",
+            "panorama": "assets/360/image2.jpeg",
+            "hfov": 110,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 0,
+                    "cssClass": "nav-btn",
+                    "text": "Go Forward",
+                    "createTooltipArgs": "⬆",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene3"
+                    }
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 180,
+                    "cssClass": "nav-btn",
+                    "text": "Go Forward",
+                    "createTooltipArgs": "⬆",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene6"
+                    }
+                }
+            ]
+        },
+        "scene3": {
+            "title": "L-107 \n GAME DEVELOPMENT",
+            "panorama": "assets/360/image3.jpeg",
+            "hfov": 110,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -85,
+                    "cssClass": "nav-btn",
+                    "text": "Go Forward",
+                    "createTooltipArgs": "⬆",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene2"
+                    }
+                }
+            ]
+        },
+        "scene4": {
+            "title": "CV RAMAN GATE",
+            "panorama": "assets/360/image5.jpeg",
+            "hfov": 110,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 90,
+                    "cssClass": "nav-btn",
+                    "text": "Go Left",
+                    "createTooltipArgs": "⬅",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene1"
+                    }
+                }
+            ]
+        },
+        "scene6": {
+            "title": "Again Going to CV RAMAN GATE",
+            "panorama": "assets/360/image7.jpeg",
+            "hfov": 110,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 0,
+                    "cssClass": "nav-btn",
+                    "text": "Go Left",
+                    "createTooltipArgs": "↖",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene4"
+                    }
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 190,
+                    "cssClass": "nav-btn",
+                    "text": "Go Right",
+                    "createTooltipArgs": "➡",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene1"
+                    }
+                }
+            ]
+        },
+        "scene8": {
+            "title": "IOS LAB",
+            "panorama": "assets/360/image8.jpeg",
+            "hfov": 110,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 90,
+                    "cssClass": "nav-btn",
+                    "text": "Go LEFT",
+                    "createTooltipArgs": "⬅",
+                    "clickHandlerArgs": {
+                        "sceneId": "scene1"
+                    }
+                },
+                {
+                    "pitch": -25,
+                    "yaw": -5,
+                    "cssClass": "book-hotspot",
+                    "createTooltipArgs": "⬇️",
+                    "type": "info",
+                    "clickHandlerFunc": "showInfo",
+                    "clickHandlerArgs": {
+                        "title": "AI Fundamentals Book",
+                        "description": "This book explains Artificial Intelligence basics, machine learning concepts, and real-world applications."
+                    }
+                }
+            ]
+        }
+    }
+}

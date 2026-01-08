@@ -1,0 +1,366 @@
+/* 1. Global Reset & Variables */
+:root {
+  --uni-blue: #002147;
+  /* Classic Academic Blue */
+  --uni-gold: #FFD700;
+  /* Accent Gold */
+  --text-dark: #333;
+  --bg-light: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Navigation buttons */
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(80, 80, 80, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+.pnlm-title-box {
+
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+
+@media (max-width: 768px) {
+  .nav-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  }
+
+  .pnlm-title-box {
+    font-size: 14px;
+  }
+}
+
+
+
+/* 2. Top Info Bar */
+.top-bar {
+  background-color: #00152e;
+  color: #ccc;
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 3. Main Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.logo h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  color: var(--uni-blue);
+  line-height: 1;
+}
+
+.logo small {
+  color: #666;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--uni-blue);
+}
+
+.btn-apply {
+  background-color: var(--uni-blue);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-apply:hover {
+  background-color: var(--uni-gold);
+  color: var(--uni-blue) !important;
+}
+
+/* 4. Main Content */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.tour-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tour-header h2 {
+  font-family: 'Merriweather', serif;
+  color: var(--uni-blue);
+  font-size: 28px;
+}
+
+.tour-header p {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* 5. The Tour Wrapper (Grid Layout) */
+.tour-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  /* 75% Tour, 25% Sidebar */
+  gap: 20px;
+  height: 600px;
+  /* Fixed height for the viewer area */
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#panorama {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #000;
+  /* Fallback */
+}
+
+/* Sidebar Styling */
+.tour-sidebar {
+  padding: 20px;
+  background: #f9f9f9;
+  border-left: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-sidebar h3 {
+  color: var(--uni-blue);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.location-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.location-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+}
+
+.instructions {
+  background: #eef2f5;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: auto;
+}
+
+/* 6. Footer */
+footer {
+  background-color: var(--uni-blue);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: auto;
+}
+
+/* Pannellum Customization Override */
+.pnlm-load-box {
+  background-color: rgba(0, 33, 71, 0.8) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  /* Hide nav on mobile for simplicity */
+  .tour-wrapper {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  #panorama {
+    height: 400px;
+  }
+
+  .tour-sidebar {
+    display: none;
+  }
+
+  /* Hide sidebar on mobile */
+}
+
+
+.about-page {
+  padding: 40px 0;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-header h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+}
+
+.about-content {
+  max-width: 900px;
+  line-height: 1.7;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-content h3 {
+  margin-top: 25px;
+  color: #1a3c6e;
+}
+
+.info-popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  width: 300px;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.info-popup h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.info-popup p {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.info-popup button {
+  margin-top: 10px;
+  background: #38bdf8;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* book hotspot */
+.book-hotspot {
+  background: transparent; /* Remove background */
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 32px; /* Large arrow */
+  color: #ff0000; /* Red arrow for visibility, or use white/gold */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
