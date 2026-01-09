@@ -26,7 +26,6 @@ body {
   height: 35px;
   cursor: pointer;
   z-index: 1;
-  
   background: transparent;
   border: none;
   padding: 0;
@@ -37,7 +36,7 @@ body {
   height: 100%;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.6);
-  background-color: transparent;
+ 
   border: 1px solid rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
@@ -375,11 +374,11 @@ footer {
   }
 
   40% {
-    transform: translateX(-15px);
+    transform: translateX(-20px);
   }
 
   60% {
-    transform: translateX(-5px);
+    transform: translateX(-10px);
   }
 }
 
@@ -406,6 +405,25 @@ footer {
   }
 
   40% {
+    transform: translateY(20px);
+  }
+
+  60% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes bounce-up {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
     transform: translateY(-20px);
   }
 
@@ -418,6 +436,9 @@ footer {
   animation: bounce-down 2s infinite;
 }
 
+.animate-bounce-up .hotspot-content {
+  animation: bounce-up 2s infinite;
+}
 
 
 .hidden-hotspot {
@@ -425,3 +446,24 @@ footer {
 }
 
 
+.arrow-img {
+  width: 20px;
+  height: 20px;
+}
+
+/* directions using existing cssClass */
+.animate-bounce-left .arrow-img {
+  transform: rotate(180deg);
+}
+
+.animate-bounce-right .arrow-img {
+  transform: rotate(0deg);
+}
+
+.animate-bounce-up .arrow-img {
+  transform: rotate(-90deg);
+}
+
+.animate-bounce-down .arrow-img {
+  transform: rotate(90deg);
+}
