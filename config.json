@@ -15,9 +15,7 @@
         {
           "pitch": -15,
           "yaw": 180,
-          "cssClass": "nav-btn animate-bounce-down",
-          "text": "Go Back",
-          "createTooltipArgs": "⬆",
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
             "sceneId": "scene2"
           }
@@ -26,8 +24,6 @@
           "pitch": -10,
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-right",
-          "text": "Go Right",
-          "createTooltipArgs": "➡",
           "clickHandlerArgs": {
             "sceneId": "scene4"
           }
@@ -36,8 +32,6 @@
           "pitch": -10,
           "yaw": 160,
           "cssClass": "nav-btn animate-bounce-left",
-          "text": "Go left ",
-          "createTooltipArgs": "⬅",
           "clickHandlerArgs": {
             "sceneId": "scene8"
           }
@@ -46,30 +40,28 @@
           "pitch": -6,
           "yaw": 70,
           "type": "info",
-          "text": "VR Headset",
+          "text": "IOS Training Center",
           "clickHandlerArgs": {
-            "title": "VR Headset",
-            "description": "This VR headset is used for immersive learning, virtual labs, simulations, and hands-on training experiences."
+            "title": "IOS Training Center"
+            
           }
         },
          {
           "pitch": -4,
           "yaw": 180,
           "type": "info",
-          "text": "Network Router",
+          "text": "Network Architecture LAB",
           "clickHandlerArgs": {
-            "title": "Enterprise Router",
-            "description": "This router is used for teaching network architecture, routing protocols, and enterprise networking concepts."
+            "title": "Network Architecture LAB"
           }
         },
         {
           "pitch": -4,
           "yaw": 0,
           "type": "info",
-          "text": "Network Router",
+          "text": "AI/ML LAB",
           "clickHandlerArgs": {
-            "title": "Enterprise Router",
-            "description": "This router is used for teaching network architecture, routing protocols, and enterprise networking concepts."
+            "title": "AI/ML LAB"
           }
         }
       ]
@@ -83,9 +75,7 @@
         {
           "pitch": -15,
           "yaw": 0,
-          "cssClass": "nav-btn animate-bounce-down",
-          "text": "Go Forward",
-          "createTooltipArgs": "⬆",
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
             "sceneId": "scene3"
           }
@@ -93,9 +83,7 @@
         {
           "pitch": -15,
           "yaw": 180,
-          "cssClass": "nav-btn animate-bounce-down",
-          "text": "Go Forward",
-          "createTooltipArgs": "⬆",
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
             "sceneId": "scene6"
           }
@@ -104,20 +92,18 @@
           "pitch": -4,
           "yaw": -160,
           "type": "info",
-          "text": "Network Router",
+          "text": "Network Architecture LAB",
           "clickHandlerArgs": {
-            "title": "Enterprise Router",
-            "description": "This router is used for teaching network architecture, routing protocols, and enterprise networking concepts."
+            "title": "Network Architecture LAB"
           }
         },
         {
           "pitch": -5,
           "yaw": -170,
           "type": "info",
-          "text": "Game Development",
+          "text": "Seminar Hall",
           "clickHandlerArgs": {
-            "title": "Game Development Lab",
-            "description": "Explore our high-end game design and development workstation."
+            "title": "Seminar Hall"
           }
         }
       ]
@@ -132,8 +118,6 @@
           "pitch": -10,
           "yaw": -85,
           "cssClass": "nav-btn animate-bounce-up",
-          "text": "Go Forward",
-          "createTooltipArgs": "⬆",
           "clickHandlerArgs": {
             "sceneId": "scene2"
           }
@@ -142,20 +126,18 @@
           "pitch": -5,
           "yaw": -20,
           "type": "info",
-          "text": "Game Development",
+          "text": "L-107 Game Development Lab",
           "clickHandlerArgs": {
-            "title": "Game Development Lab",
-            "description": "Explore our high-end game design and development workstation."
+            "title": "L-107 Game Development Lab"
           }
         },
         {
           "pitch": -6,
           "yaw": 30,
           "type": "info",
-          "text": "IOT",
+          "text": "L-106 IOT Lab",
           "clickHandlerArgs": {
-            "title": "VR Headset",
-            "description": "This VR headset is used for immersive learning, virtual labs, simulations, and hands-on training experiences."
+            "title": "L-106 IOT Lab"
           }
         }
       ]
@@ -170,8 +152,6 @@
           "pitch": -10,
           "yaw": 90,
           "cssClass": "nav-btn animate-bounce-left",
-          "text": "Go Left",
-          "createTooltipArgs": "⬅",
           "clickHandlerArgs": {
             "sceneId": "scene1"
           }
@@ -188,8 +168,6 @@
           "pitch": -10,
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-left",
-          "text": "Go Left",
-          "createTooltipArgs": "⬅",
           "clickHandlerArgs": {
             "sceneId": "scene4"
           }
@@ -198,10 +176,9 @@
           "pitch": -4,
           "yaw": 140,
           "type": "info",
-          "text": "Network Router",
+          "text": "Seminar Hall",
           "clickHandlerArgs": {
-            "title": "Enterprise Router",
-            "description": "This router is used for teaching network architecture, routing protocols, and enterprise networking concepts."
+            "title": "Seminar Hall"
           }
         }
       ]
@@ -216,8 +193,6 @@
           "pitch": -10,
           "yaw": 90,
           "cssClass": "nav-btn animate-bounce-left",
-          "text": "Go LEFT",
-          "createTooltipArgs": "⬅",
           "clickHandlerArgs": {
             "sceneId": "scene1"
           }
@@ -228,8 +203,7 @@
           "type": "info",
           "text": "iOS Development Kit",
           "clickHandlerArgs": {
-            "title": "iOS Development Setup",
-            "description": "This setup is used for teaching iOS app development, Swift programming, and mobile UI design."
+            "title": "iOS Development Setup"
           }
         }
       ]
