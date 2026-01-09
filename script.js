@@ -16,7 +16,7 @@ function smoothTransition(event, args) {
 function hotspotText(div, args) {
     const content = document.createElement('div');
     content.classList.add('hotspot-content');
-    content.innerHTML = args;
+    content.innerHTML = `<img src="assets/arrow.png" class="arrow-img">`;
     div.innerHTML = '';
     div.appendChild(content);
   }
