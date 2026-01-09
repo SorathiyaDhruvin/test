@@ -8,7 +8,7 @@
   "scenes": {
     "scene1": {
       "title": "IOS TRAINING CENTER \n DATA CENTER",
-      "panorama": "assets/image1.jpeg",
+      "panorama": "abcd.jpeg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
