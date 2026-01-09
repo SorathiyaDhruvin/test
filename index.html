@@ -1,62 +1,81 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot spots</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-   <style>
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#panorama {
-    width: 100vw;
-    height: 100vh;
-}
-</style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body>
 
-<div id="panorama"></div>
-<script>
-pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "abcd.jpeg",
-    /*
-     * Uncomment the next line to print the coordinates of mouse clicks
-     * to the browser's developer console, which makes it much easier
-     * to figure out where to place hot spots. Always remove it when
-     * finished, though.
-     */
-    //"hotSpotDebug": true,
-    "hotSpots": [
-        {
-            "pitch": 14.1,
-            "yaw": 1.5,
-            "type": "info",
-            "text": "Baltimore Museum of Art"
-        },
-        {
-            "pitch": -9.4,
-            "yaw": 222.6,
-            "type": "info",
-            "text": "Art Museum Drive"
-        },
-        {
-            "pitch": -0.9,
-            "yaw": 144.4,
-            "type": "info",
-            "text": "North Charles Street"
-        }
-    ]
-});
-</script>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <span>Students | Faculty | Alumni | Parents</span>
+            <span>Portal Login</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-icon">🏛️</div>
+                <div class="logo-text">
+                    <h1>Parul University</h1>
+                    <small>Excellence in Innovation</small>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#" class="btn-apply">Apply Now</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main>
+        <section class="tour-header">
+            <h2>Explore Our Civi raman</h2>
+            <p>Experience our state-of-the-art facilities from the comfort of your home.</p>
+        </section>
+
+        <div class="tour-wrapper">
+            <div id="panorama"></div>
+
+            <div class="tour-sidebar">
+                <h3>Current Location</h3>
+                <p>You are navigating the main campus building.</p>
+                <ul class="location-list">
+                    <li>📍 Data Center</li>
+                    <li>📍 Nextwork Lab</li>
+                    <li>📍 Tinkering Hub</li>
+                    <li>📍AI/ML Lab</li>
+                    <li>📍Seminar Hall</li>
+                </ul>
+                <div class="instructions">
+                    <strong>How to use:</strong>
+                    <p>Click and drag to look around. Click the arrows to move between rooms.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 University of Future Tech. All Rights Reserved.</p>
+            <p>Contact: admissions@futuretech.edu | +91 123-456-7890</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
