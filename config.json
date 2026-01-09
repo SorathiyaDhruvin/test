@@ -1,164 +1,212 @@
 {
-    "default": {
-        "firstScene": "scene1",
-        "sceneFadeDuration": 1000,
-        "autoLoad": true,
-        "compass": false
-    },
-    "scenes": {
-        "scene1": {
-            "title": "IOS TRANING CENTER \n DATA CENTER",
-            "panorama": "assets/360/image1.jpeg",
-            "hfov": 110,
-            "hotSpots": [
-                {
-                    "pitch": -10,
-                    "yaw": 180,
-                    "cssClass": "nav-btn",
-                    "text": "Go Back",
-                    "createTooltipArgs": "⬆",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene2"
-                    }
-                },
-                {
-                    "pitch": -10,
-                    "yaw": 160,
-                    "cssClass": "nav-btn",
-                    "text": "Go Left",
-                    "createTooltipArgs": "⬅",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene8"
-                    }
-                },
-                {
-                    "pitch": -10,
-                    "yaw": 0,
-                    "cssClass": "nav-btn",
-                    "text": "Go Right",
-                    "createTooltipArgs": "➡",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene4"
-                    }
-                }
-            ]
+  "default": {
+    "firstScene": "scene1",
+    "sceneFadeDuration": 1000,
+    "autoLoad": true,
+    "compass": true
+  },
+  "scenes": {
+    "scene1": {
+      "title": "IOS TRAINING CENTER \n DATA CENTER",
+      "panorama": "assets/image1.jpeg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene2"
+          }
         },
-        "scene2": {
-            "title": "L-108 \n NETWORK ARCHITECTURE",
-            "panorama": "assets/360/image2.jpeg",
-            "hfov": 110,
-            "hotSpots": [
-                {
-                    "pitch": -10,
-                    "yaw": 0,
-                    "cssClass": "nav-btn",
-                    "text": "Go Forward",
-                    "createTooltipArgs": "⬆",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene3"
-                    }
-                },
-                {
-                    "pitch": -10,
-                    "yaw": 180,
-                    "cssClass": "nav-btn",
-                    "text": "Go Forward",
-                    "createTooltipArgs": "⬆",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene6"
-                    }
-                }
-            ]
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene4"
+          }
         },
-        "scene3": {
-            "title": "L-107 \n GAME DEVELOPMENT",
-            "panorama": "assets/360/image3.jpeg",
-            "hfov": 110,
-            "hotSpots": [
-                {
-                    "pitch": -10,
-                    "yaw": -85,
-                    "cssClass": "nav-btn",
-                    "text": "Go Forward",
-                    "createTooltipArgs": "⬆",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene2"
-                    }
-                }
-            ]
+        {
+          "pitch": -10,
+          "yaw": 160,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene8"
+          }
         },
-        "scene4": {
-            "title": "CV RAMAN GATE",
-            "panorama": "assets/360/image5.jpeg",
-            "hfov": 110,
-            "hotSpots": [
-                {
-                    "pitch": -10,
-                    "yaw": 90,
-                    "cssClass": "nav-btn",
-                    "text": "Go Left",
-                    "createTooltipArgs": "⬅",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene1"
-                    }
-                }
-            ]
+        {
+          "pitch": -6,
+          "yaw": 70,
+          "type": "info",
+          "text": "IOS Training Center",
+          "clickHandlerArgs": {
+            "title": "IOS Training Center"
+            
+          }
         },
-        "scene6": {
-            "title": "Again Going to CV RAMAN GATE",
-            "panorama": "assets/360/image7.jpeg",
-            "hfov": 110,
-            "hotSpots": [
-                {
-                    "pitch": -10,
-                    "yaw": 0,
-                    "cssClass": "nav-btn",
-                    "text": "Go Left",
-                    "createTooltipArgs": "↖",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene4"
-                    }
-                },
-                {
-                    "pitch": -10,
-                    "yaw": 190,
-                    "cssClass": "nav-btn",
-                    "text": "Go Right",
-                    "createTooltipArgs": "➡",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene1"
-                    }
-                }
-            ]
+         {
+          "pitch": -4,
+          "yaw": 180,
+          "type": "info",
+          "text": "Network Architecture LAB",
+          "clickHandlerArgs": {
+            "title": "Network Architecture LAB"
+          }
         },
-        "scene8": {
-            "title": "IOS LAB",
-            "panorama": "assets/360/image8.jpeg",
-            "hfov": 110,
-            "hotSpots": [
-                {
-                    "pitch": -10,
-                    "yaw": 90,
-                    "cssClass": "nav-btn",
-                    "text": "Go LEFT",
-                    "createTooltipArgs": "⬅",
-                    "clickHandlerArgs": {
-                        "sceneId": "scene1"
-                    }
-                },
-                {
-                    "pitch": -25,
-                    "yaw": -5,
-                    "cssClass": "book-hotspot",
-                    "createTooltipArgs": "⬇️",
-                    "type": "info",
-                    "clickHandlerFunc": "showInfo",
-                    "clickHandlerArgs": {
-                        "title": "AI Fundamentals Book",
-                        "description": "This book explains Artificial Intelligence basics, machine learning concepts, and real-world applications."
-                    }
-                }
-            ]
+        {
+          "pitch": -4,
+          "yaw": 0,
+          "type": "info",
+          "text": "AI/ML LAB",
+          "clickHandlerArgs": {
+            "title": "AI/ML LAB"
+          }
         }
+      ]
+    },
+    "scene2": {
+      "title": "L-108 \n NETWORK ARCHITECTURE",
+      "panorama": "assets/image2.jpeg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene3"
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6"
+          }
+        },
+        {
+          "pitch": -4,
+          "yaw": -160,
+          "type": "info",
+          "text": "Network Architecture LAB",
+          "clickHandlerArgs": {
+            "title": "Network Architecture LAB"
+          }
+        },
+        {
+          "pitch": -5,
+          "yaw": -170,
+          "type": "info",
+          "text": "Seminar Hall",
+          "clickHandlerArgs": {
+            "title": "Seminar Hall"
+          }
+        }
+      ]
+    },
+    "scene3": {
+      "title": "L-107 \n GAME DEVELOPMENT",
+      "panorama": "assets/image3.jpeg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": -85,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene2"
+          }
+        },
+        {
+          "pitch": -5,
+          "yaw": -20,
+          "type": "info",
+          "text": "L-107 Game Development Lab",
+          "clickHandlerArgs": {
+            "title": "L-107 Game Development Lab"
+          }
+        },
+        {
+          "pitch": -6,
+          "yaw": 30,
+          "type": "info",
+          "text": "L-106 IOT Lab",
+          "clickHandlerArgs": {
+            "title": "L-106 IOT Lab"
+          }
+        }
+      ]
+    },
+    "scene4": {
+      "title": "CV RAMAN GATE",
+      "panorama": "assets/image5.jpeg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene1"
+          }
+        }
+      ]
+    },
+    "scene6": {
+      "title": "Again Going to CV RAMAN GATE",
+      "panorama": "assets/image7.jpeg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene4"
+          }
+        },
+        {
+          "pitch": -4,
+          "yaw": 140,
+          "type": "info",
+          "text": "Seminar Hall",
+          "clickHandlerArgs": {
+            "title": "Seminar Hall"
+          }
+        }
+      ]
+    },
+    "scene8": {
+      "title": "IOS LAB",
+      "panorama": "assets/image8.jpeg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene1"
+          }
+        },
+        {
+          "pitch": -25,
+          "yaw": 20,
+          "type": "info",
+          "text": "iOS Development Kit",
+          "clickHandlerArgs": {
+            "title": "iOS Development Setup"
+          }
+        }
+      ]
     }
+  }
 }
