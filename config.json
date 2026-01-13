@@ -7,71 +7,71 @@
   },
   "scenes": {
     "scene1": {
-      "title": "IOS TRAINING CENTER \n DATA CENTER",
-      "panorama": "assets/image1.jpeg",
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/frame1.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
         {
           "pitch": -15,
-          "yaw": 180,
+          "yaw": -87,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene4"
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 5,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
             "sceneId": "scene2"
           }
         },
         {
-          "pitch": -10,
-          "yaw": 0,
-          "cssClass": "nav-btn animate-bounce-right",
-          "clickHandlerArgs": {
-            "sceneId": "scene4"
-          }
-        },
-        {
-          "pitch": -10,
-          "yaw": 160,
-          "cssClass": "nav-btn animate-bounce-left",
-          "clickHandlerArgs": {
-            "sceneId": "scene8"
-          }
-        },
-        {
-          "pitch": -6,
-          "yaw": 70,
+          "pitch": 15,
+          "yaw": 63,
           "type": "info",
-          "text": "IOS Training Center",
+          "text": "L-106 IOT Lab",
           "clickHandlerArgs": {
-            "title": "IOS Training Center"
+            "title": "L-106 IOT Lab"
             
-          }
-        },
-         {
-          "pitch": -4,
-          "yaw": 180,
-          "type": "info",
-          "text": "Network Architecture LAB",
-          "clickHandlerArgs": {
-            "title": "Network Architecture LAB"
           }
         },
         {
           "pitch": -1,
           "yaw": 0,
           "type": "info",
-          "text": "AI/ML LAB",
+          "text": "VR headset",
           "clickHandlerArgs": {
-            "title": "AI/ML LAB"
+            "title": "VR headset"
           }
         }
       ]
     },
     "scene2": {
-      "title": "L-108 \n NETWORK ARCHITECTURE",
-      "panorama": "assets/image2.jpeg",
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/frame2.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
+        {
+          "pitch": -6,
+          "yaw": 80,
+          "type": "info",
+          "text": "VR headset",
+          "clickHandlerArgs": {
+            "title": "VR headset"
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -100,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene1"
+          }
+        },
         {
           "pitch": -15,
           "yaw": 0,
@@ -79,134 +79,253 @@
           "clickHandlerArgs": {
             "sceneId": "scene3"
           }
-        },
+        }
+      ]
+    },
+    "scene3": {
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/frame3.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
         {
           "pitch": -15,
           "yaw": 180,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
+            "sceneId": "scene2"
+          }
+        }
+      ]
+    },
+  
+    "scene4": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/frame4.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 2,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene1"
+          }
+        },
+         {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene5"
+          }
+        },
+        {
+          "pitch": -2,
+          "yaw": 155,
+          "type": "info",
+          "text": "Data Center",
+          "clickHandlerArgs": {
+            "title": "Data Center"
+          }
+        }
+      ]
+    },
+    "scene5": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/frame5.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 200,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
             "sceneId": "scene6"
           }
         },
-        {
-          "pitch": -4,
-          "yaw": -160,
-          "type": "info",
-          "text": "Network Architecture LAB",
-          "clickHandlerArgs": {
-            "title": "Network Architecture LAB"
-          }
-        },
-        {
-          "pitch": -5,
-          "yaw": -170,
-          "type": "info",
-          "text": "Seminar Hall",
-          "clickHandlerArgs": {
-            "title": "Seminar Hall"
-          }
-        }
-      ]
-    },
-    "scene3": {
-      "title": "L-107 \n GAME DEVELOPMENT",
-      "panorama": "assets/image3.jpeg",
-      "hfov": 110,
-      "northOffset": 0,
-      "hotSpots": [
-        {
+         {
           "pitch": -10,
-          "yaw": -85,
+          "yaw": 182,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene2"
+            "sceneId": "scene10"
           }
         },
-        {
-          "pitch": -5,
-          "yaw": -20,
-          "type": "info",
-          "text": "L-107 Game Development Lab",
-          "clickHandlerArgs": {
-            "title": "L-107 Game Development Lab"
-          }
-        },
-        {
-          "pitch": -6,
-          "yaw": 30,
-          "type": "info",
-          "text": "L-106 IOT Lab",
-          "clickHandlerArgs": {
-            "title": "L-106 IOT Lab"
-          }
-        }
-      ]
-    },
-    "scene4": {
-      "title": "CV RAMAN GATE",
-      "panorama": "assets/image5.jpeg",
-      "hfov": 110,
-      "northOffset": 0,
-      "hotSpots": [
-        {
+         {
           "pitch": -10,
-          "yaw": 90,
-          "cssClass": "nav-btn animate-bounce-left",
+          "yaw": 2,
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene1"
+            "sceneId": "scene4"
+          }
+        },
+         {
+          "pitch": -1,
+          "yaw": -140,
+          "type": "info",
+          "text": "Network Architecture Lab",
+          "clickHandlerArgs": {
+            "title": "Network Architecture Lab"
+          }
+        },
+        {
+          "pitch": -1,
+          "yaw": 38,
+          "type": "info",
+          "text": "Data Center",
+          "clickHandlerArgs": {
+            "title": "Data Center"
           }
         }
       ]
     },
     "scene6": {
-      "title": "Again Going to CV RAMAN GATE",
-      "panorama": "assets/image7.jpeg",
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/frame6.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
         {
           "pitch": -10,
-          "yaw": 0,
-          "cssClass": "nav-btn animate-bounce-left",
+          "yaw": 200,
+          "cssClass": "nav-btn animate-bounce-right",
           "clickHandlerArgs": {
-            "sceneId": "scene4"
+            "sceneId": "scene10"
           }
         },
         {
-          "pitch": -4,
-          "yaw": 140,
-          "type": "info",
-          "text": "Seminar Hall",
+          "pitch": -10,
+          "yaw": 150,
+          "cssClass": "nav-btn animate-bounce-left",
           "clickHandlerArgs": {
-            "title": "Seminar Hall"
+            "sceneId": "scene5"
+          }
+        },
+         {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene7"
+          }
+        }
+      ]
+    },
+    "scene7": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/frame7.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+         {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene8"
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6"
           }
         }
       ]
     },
     "scene8": {
-      "title": "IOS LAB",
-      "panorama": "assets/image8.jpeg",
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/frame8.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
-        {
+         {
           "pitch": -10,
-          "yaw": 90,
-          "cssClass": "nav-btn animate-bounce-left",
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene1"
+            "sceneId": "scene9"
           }
         },
         {
-          "pitch": -25,
-          "yaw": 20,
-          "type": "info",
-          "text": "iOS Development Kit",
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "title": "iOS Development Setup"
+            "sceneId": "scene7"
+          }
+        }
+      ]
+    },
+    "scene9": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/frame9.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+         {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene8"
+          }
+         }
+      ]
+    },
+    "scene10": {
+      "title": "Seminar Hall",
+      "panorama": "assets/frame10.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+         {
+          "pitch": -10,
+          "yaw": 182,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene11"
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 5,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene5"
+          }
+        },
+        {
+          "pitch": -5,
+          "yaw": -15,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene7"
+          }
+        }
+      ]
+    },
+    "scene11": {
+      "title": "Seminar Hall",
+      "panorama": "assets/frame11.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+         {
+          "pitch": -10,
+          "yaw": -5,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene10"
           }
         }
       ]
     }
+
   }
 }
