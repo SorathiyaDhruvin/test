@@ -9,7 +9,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -18,7 +17,10 @@ body {
   color: var(--text-dark);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -77,7 +79,7 @@ body {
   }
 
   .pnlm-info {
-    margin-top: -8px;
+    margin-top: -5px;
     /* Pull info icon up */
   }
 
@@ -88,186 +90,17 @@ body {
 
 
 
-/* 2. Top Info Bar */
-.top-bar {
-  background-color: #00152e;
-  color: #ccc;
-  font-size: 12px;
-  padding: 8px 0;
-}
-
-.top-bar .container {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* 3. Main Navbar */
-.navbar {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-icon {
-  font-size: 32px;
-}
-
-.logo h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 24px;
-  color: var(--uni-blue);
-  line-height: 1;
-}
-
-.logo small {
-  color: #666;
-  letter-spacing: 1px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--uni-blue);
-}
-
-.btn-apply {
-  background-color: var(--uni-blue);
-  color: white !important;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.btn-apply:hover {
-  background-color: var(--uni-gold);
-  color: var(--uni-blue) !important;
-}
-
-/* 4. Main Content */
-main {
-  flex: 1;
-  width: 90%;
-  max-width: 1200px;
-  margin: 30px auto;
-}
-
-.tour-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.tour-header h2 {
-  font-family: 'Merriweather', serif;
-  color: var(--uni-blue);
-  font-size: 28px;
-}
-
-.tour-header p {
-  color: #666;
-  margin-top: 5px;
-}
-
-/* 5. The Tour Wrapper (Grid Layout) */
+/* 5. The Tour Wrapper (Full Screen) */
 .tour-wrapper {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  /* 75% Tour, 25% Sidebar */
-  gap: 20px;
-  height: 600px;
-  /* Fixed height for the viewer area */
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
 }
 
 #panorama {
   width: 100%;
   height: 100%;
-  border-radius: 4px;
   background: #000;
   /* Fallback */
-}
-
-/* Sidebar Styling */
-.tour-sidebar {
-  padding: 20px;
-  background: #f9f9f9;
-  border-left: 1px solid #eee;
-  display: flex;
-  flex-direction: column;
-}
-
-.tour-sidebar h3 {
-  color: var(--uni-blue);
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.location-list {
-  list-style: none;
-  margin-bottom: 20px;
-}
-
-.location-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  color: #555;
-}
-
-.instructions {
-  background: #eef2f5;
-  padding: 15px;
-  border-radius: 6px;
-  font-size: 13px;
-  margin-top: auto;
-}
-
-/* 6. Footer */
-footer {
-  background-color: var(--uni-blue);
-  color: white;
-  text-align: center;
-  padding: 30px 0;
-  margin-top: auto;
 }
 
 /* Pannellum Customization Override */
@@ -278,77 +111,26 @@ footer {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  .nav-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    margin-top: 15px;
+    /* Push arrow down */
   }
 
-  /* Hide nav on mobile for simplicity */
-  .tour-wrapper {
-    grid-template-columns: 1fr;
-    height: auto;
+  .pnlm-info {
+    margin-top: -5px;
+    /* Pull info icon up */
   }
 
-  #panorama {
-    height: 400px;
+  .pnlm-title-box {
+    font-size: 14px;
   }
-
-  .tour-sidebar {
-    display: none;
-  }
-
-  /* Hide sidebar on mobile */
 }
 
 
-.about-page {
-  padding: 40px 0;
-}
 
-.about-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.about-header h2 {
-  font-family: 'Merriweather', serif;
-  font-size: 32px;
-}
-
-.about-content {
-  max-width: 900px;
-  line-height: 1.7;
-  font-family: 'Roboto', sans-serif;
-}
-
-.about-content h3 {
-  margin-top: 25px;
-  color: #1a3c6e;
-}
-
-.info-popup {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #0f172a;
-  color: #fff;
-  padding: 16px 20px;
-  border-radius: 12px;
-  width: 300px;
-  display: none;
-  z-index: 9999;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.info-popup h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-
-.info-popup p {
-  font-size: 14px;
-  color: #cbd5f5;
-}
 
 
 
