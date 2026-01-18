@@ -1,7 +1,7 @@
 {
   "default": {
     "firstScene": "scene1",
-    "sceneFadeDuration": 1000,
+    "sceneFadeDuration": 0,
     "autoLoad": true,
     "compass": true
   },

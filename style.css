@@ -105,7 +105,88 @@ body {
 
 /* Pannellum Customization Override */
 .pnlm-load-box {
-  background-color: rgba(0, 33, 71, 0.8) !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block; /* Default to block */
+  text-align: center;
+  padding-top: 50px;
+}
+
+.pnlm-load-box::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  animation: rotate 1s linear infinite;
+  animation-delay: 0.3s; /* Grace period: hide for fast loads */
+  opacity: 0; /* Starte hidden */
+  animation-fill-mode: forwards; /* Keep it visible after delay if loading persists */
+}
+
+/* We need a wrapper animation to handle the delay+appear because animation-delay 
+   on 'rotate' just waits to rotate, but the element is still visible. 
+   So we use a simple keyframe to fade it in after delay 
+*/
+@keyframes fadeInDelay {
+    0% { opacity: 0; }
+    99% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* ACTUALLY: A simpler way is to just put the delay on the element itself? 
+   Wait, the user wants the SPECIFIC CSS. Let's stick to their CSS but wrap it 
+   so we can control visibility. 
+   
+   The user gave: .loader and .loader::before.
+   Pannellum gives us .pnlm-load-box.
+   So .pnlm-load-box becomes the .loader container.
+*/
+
+.pnlm-load-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: absolute; /* Center in container */
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+  padding: 0 !important; /* Reset padding */
+  
+  animation: rotate 1s linear infinite, fadeIn 0.1s linear 0.3s forwards; /* Rotate + Delay FadeIn */
+  opacity: 0; /* Start hidden */
+}
+
+.pnlm-load-box::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+.pnlm-lbar, .pnlm-lbox, .pnlm-load-box p {
+  display: none !important;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
 
@@ -257,3 +338,6 @@ body {
 .animate-bounce-down .arrow-img {
   transform: rotate(90deg);
 }
+
+
+

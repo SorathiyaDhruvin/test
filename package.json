@@ -1,0 +1,23 @@
+{
+  "name": "interior-traverse",
+  "version": "1.0.0",
+  "description": "A 360° virtual tour application built with [Pannellum](https://pannellum.org/).",
+  "main": "optimize_images.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deep-vinci/interior-traverse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deep-vinci/interior-traverse/issues"
+  },
+  "homepage": "https://github.com/deep-vinci/interior-traverse#readme",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

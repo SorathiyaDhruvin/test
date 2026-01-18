@@ -1,16 +1,6 @@
 function smoothTransition(event, args) {
   const targetScene = args.sceneId;
-  let hfov = viewer.getHfov();
-
-  const zoom = setInterval(() => {
-    if (hfov > 60) {
-      hfov -= 2;
-      viewer.setHfov(hfov);
-    } else {
-      clearInterval(zoom);
-      viewer.loadScene(targetScene);
-    }
-  }, 10);
+  viewer.loadScene(targetScene);
 }
 
 function hotspotText(div, args) {
@@ -30,6 +20,28 @@ function showInfo(event, args) {
 
 function closeInfo() {
   document.getElementById("infoPopup").style.display = "none";
+}
+
+// Function to preload images in background
+function preloadImages(config) {
+  console.log("Starting background image preload...");
+  const images = new Set();
+  
+  // Extract all unique image paths
+  for (const sceneId in config.scenes) {
+    const scene = config.scenes[sceneId];
+    if (scene.panorama) {
+      images.add(scene.panorama);
+    }
+  }
+
+  // Load each image
+  images.forEach(imgUrl => {
+    const img = new Image();
+    img.src = imgUrl;
+    img.onload = () => console.log(`Preloaded: ${imgUrl}`);
+    img.onerror = () => console.warn(`Failed to preload: ${imgUrl}`);
+  });
 }
 
 // Load config and attach logic
@@ -68,5 +80,8 @@ fetch("config.json")
     }
 
     window.viewer = pannellum.viewer("panorama", config);
+    
+    // Start preloading after initial viewer setup
+    setTimeout(() => preloadImages(config), 1000);
   })
   .catch(err => console.error(err));
