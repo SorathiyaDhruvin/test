@@ -1,14 +1,14 @@
 {
   "default": {
     "firstScene": "scene1",
-    "sceneFadeDuration": 0,
+    "sceneFadeDuration": 1000,
     "autoLoad": true,
     "compass": true
   },
   "scenes": {
     "scene1": {
       "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
-      "panorama": "assets/frame1.jpg",
+      "panorama": "assets/originals/frame1.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -34,24 +34,27 @@
           "type": "info",
           "text": "L-106 IOT Lab",
           "clickHandlerArgs": {
-            "title": "L-106 IOT Lab"
-            
+            "title": "L-106 IOT Lab",
+            "description": "The Internet of Things Lab features Arduino boards, Raspberry Pi devices, sensors, and smart device components for hands-on IoT development and research."
+           
           }
         },
         {
-          "pitch": -1,
-          "yaw": 0,
+          "pitch": 30,
+          "yaw": -30,
           "type": "info",
-          "text": "VR headset",
+          "text": "L-107 Extended Reality & Game Development Lab",
           "clickHandlerArgs": {
-            "title": "VR headset"
+            "title": "L-107 Extended Reality & Game Development Lab",
+            "description": "The Extended Reality & Game Development Lab is a specialized facility designed for hands-on learning and research in Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR). The lab is equipped with advanced XR devices such as Microsoft HoloLens and Meta VR headsets, high-performance systems, and development tools used for creating immersive applications and games.This lab enables students to work on real-time game development, 3D visualization, interactive simulations, and virtual walkthroughs. It supports learning in areas like Unity/Unreal game engines, XR application development, human–computer interaction, and immersive technology research. The lab plays a key role in enhancing practical skills, innovation, and industry-ready experience in extended reality and game development domains."
+          
           }
         }
       ]
     },
     "scene2": {
       "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
-      "panorama": "assets/frame2.jpg",
+      "panorama": "assets/originals/frame2.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -61,7 +64,20 @@
           "type": "info",
           "text": "VR headset",
           "clickHandlerArgs": {
-            "title": "VR headset"
+            "title": "VR Headsets",
+            "description": "Meta Quest headsets are fully immersive virtual reality (VR) devices designed for gaming, development, and training applications. They provide high-resolution displays, motion-tracked controllers, and spatial audio to create realistic virtual environments. These headsets are commonly used for VR game development, virtual simulations, interactive learning, and XR research. Meta Quest devices support standalone operation as well as PC-based development, making them ideal for testing and building immersive VR experiences.",
+            "image": "assets/originals/meta.png"
+          }
+        },
+         {
+          "pitch": -6,
+          "yaw": 70,
+          "type": "info",
+          "text": "hololens",
+          "clickHandlerArgs": {
+            "title": "Hololens",
+            "description": "Microsoft HoloLens is a mixed reality (MR) headset that blends digital holograms with the real world. Unlike traditional VR, it allows users to see and interact with virtual 3D objects while remaining aware of their physical surroundings. HoloLens is widely used in education, research, engineering, healthcare, and industrial training for tasks such as 3D visualization, simulation, remote assistance, and collaborative development. It enables hands-free interaction using gestures, voice commands, and eye tracking.",
+            "image": "assets/originals/hololens.png"
           }
         },
         {
@@ -84,7 +100,7 @@
     },
     "scene3": {
       "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
-      "panorama": "assets/frame3.jpg",
+      "panorama": "assets/originals/frame3.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -98,10 +114,9 @@
         }
       ]
     },
-  
     "scene4": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/frame4.jpg",
+      "panorama": "assets/originals/frame4.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -113,7 +128,7 @@
             "sceneId": "scene1"
           }
         },
-         {
+        {
           "pitch": -10,
           "yaw": 180,
           "cssClass": "nav-btn animate-bounce-up",
@@ -127,14 +142,16 @@
           "type": "info",
           "text": "Data Center",
           "clickHandlerArgs": {
-            "title": "Data Center"
+            "title": "Data Center",
+            "description": "Enterprise-grade data center with server racks, network switches, and storage arrays. Houses the core IT infrastructure for the laboratory network."
+          
           }
         }
       ]
     },
     "scene5": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/frame5.jpg",
+      "panorama": "assets/originals/frame5.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -146,7 +163,7 @@
             "sceneId": "scene6"
           }
         },
-         {
+        {
           "pitch": -10,
           "yaw": 182,
           "cssClass": "nav-btn animate-bounce-up",
@@ -154,7 +171,7 @@
             "sceneId": "scene10"
           }
         },
-         {
+        {
           "pitch": -10,
           "yaw": 2,
           "cssClass": "nav-btn animate-bounce-up",
@@ -162,13 +179,15 @@
             "sceneId": "scene4"
           }
         },
-         {
+        {
           "pitch": -1,
           "yaw": -140,
           "type": "info",
           "text": "Network Architecture Lab",
           "clickHandlerArgs": {
-            "title": "Network Architecture Lab"
+            "title": "Network Architecture Lab",
+            "description": "Advanced networking lab equipped with Cisco routers, switches, and professional network monitoring tools for hands-on training in network design and administration."
+          
           }
         },
         {
@@ -177,14 +196,15 @@
           "type": "info",
           "text": "Data Center",
           "clickHandlerArgs": {
-            "title": "Data Center"
+            "title": "Data Center",
+            "description": "Enterprise-grade data center with server racks, network switches, and storage arrays. Houses the core IT infrastructure for the laboratory network."
           }
         }
       ]
     },
     "scene6": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/frame6.jpg",
+      "panorama": "assets/originals/frame6.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -204,7 +224,7 @@
             "sceneId": "scene5"
           }
         },
-         {
+        {
           "pitch": -10,
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-right",
@@ -216,11 +236,11 @@
     },
     "scene7": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/frame7.jpg",
+      "panorama": "assets/originals/frame7.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
-         {
+        {
           "pitch": -10,
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-up",
@@ -240,11 +260,11 @@
     },
     "scene8": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/frame8.jpg",
+      "panorama": "assets/originals/frame8.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
-         {
+        {
           "pitch": -10,
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-up",
@@ -264,27 +284,27 @@
     },
     "scene9": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/frame9.jpg",
+      "panorama": "assets/originals/frame9.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
-         {
+        {
           "pitch": -10,
           "yaw": 180,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
             "sceneId": "scene8"
           }
-         }
+        }
       ]
     },
     "scene10": {
       "title": "Seminar Hall",
-      "panorama": "assets/frame10.jpg",
+      "panorama": "assets/originals/frame10.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
-         {
+        {
           "pitch": -10,
           "yaw": 182,
           "cssClass": "nav-btn animate-bounce-up",
@@ -312,11 +332,11 @@
     },
     "scene11": {
       "title": "Seminar Hall",
-      "panorama": "assets/frame11.jpg",
+      "panorama": "assets/originals/frame11.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
-         {
+        {
           "pitch": -10,
           "yaw": -5,
           "cssClass": "nav-btn animate-bounce-up",
@@ -326,6 +346,5 @@
         }
       ]
     }
-
   }
 }
