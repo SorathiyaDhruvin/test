@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Parul University AR/VR Campus Navigation — Explore the campus in immersive 360° virtual reality with interactive hotspots.">
+    <title>PU AR/VR Campus Navigation</title>
+
+    <!-- Pannellum -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <!-- Left: Logo -->
+            <a href="home.html" class="nav-logo" id="navLogo">
+                <img src="assets/parul university.png" alt="Parul University" class="pu-header-logo">
+            </a>
+
+            <!-- Right: Menu -->
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about-university" class="nav-link">About University</a>
+                <a href="#about-platform" class="nav-link">AR/VR Platform</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="index.html" class="nav-link nav-cta-link">Enter 360° Experience</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-effects">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Immersive Campus Experience</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">PARUL UNIVERSITY</span>
+                <span class="title-line title-gradient">AR/VR CAMPUS</span>
+                <span class="title-line">NAVIGATION</span>
+            </h1>
+            <p class="hero-subtitle">
+                Experience the campus in immersive 360° virtual reality and navigate digitally with interactive
+                hotspots.
+            </p>
+            <div class="hero-buttons">
+                <a href="index.html" class="btn btn-primary" id="heroEnterBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="btn-icon">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="10 8 16 12 10 16 10 8" />
+                    </svg>
+                    Enter 360° Experience
+                </a>
+                <a href="#about-university" class="btn btn-secondary" id="heroLearnBtn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="btn-icon-right">
+                        <path d="M7 13l5 5 5-5" />
+                        <path d="M12 18V6" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="11">0</span>
+                    <span class="stat-label">Panoramic Scenes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="360">0</span>
+                    <span class="stat-suffix">°</span>
+                    <span class="stat-label">Immersive View</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Interactive</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT PARUL UNIVERSITY ========== -->
+    <section id="about-university" class="section section-about-uni">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">About Parul University</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-uni-grid">
+                <div class="about-uni-content reveal-left">
+                    <p class="about-text">
+                        Parul University is a leading multidisciplinary private university located in Vadodara, Gujarat.
+                        Spread across a vast and vibrant campus, it offers a diverse range of academic programs in
+                        engineering, medicine, pharmacy, management, arts, sciences, and technology. The university is
+                        home to thousands of students from across India and abroad and is known for its
+                        innovation-driven
+                        education, modern infrastructure, and strong industry collaboration.
+                    </p>
+                    <p class="about-text">
+                        The expansive campus includes academic blocks, administrative buildings, hostels, laboratories,
+                        libraries, sports complexes, and recreational spaces, making navigation a challenge for new
+                        students and visitors.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Multidisciplinary</strong>
+                                <span>Engineering, Medicine, Arts & More</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M2 12h20" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Global Campus</strong>
+                                <span>Students from India & abroad</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Innovation Hub</strong>
+                                <span>Modern infrastructure & labs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-uni-visual reveal-right">
+                    <div class="visual-card">
+                        <div class="visual-card-inner">
+                            <div class="visual-icon-main">
+                                <svg viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="38" stroke="url(#grad1)" stroke-width="2"
+                                        opacity="0.3" />
+                                    <circle cx="40" cy="40" r="28" stroke="url(#grad1)" stroke-width="1.5"
+                                        opacity="0.5" />
+                                    <path d="M40 15 L55 30 L55 50 L40 65 L25 50 L25 30 Z" stroke="url(#grad1)"
+                                        stroke-width="2" fill="url(#grad1)" fill-opacity="0.1" />
+                                    <text x="40" y="44" text-anchor="middle" fill="url(#grad1)" font-size="16"
+                                        font-weight="700" font-family="Poppins">PU</text>
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#1E2A78" />
+                                            <stop offset="100%" style="stop-color:#D32F2F" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="visual-floating-badge badge-1">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16"
+                                    height="16">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                                <span>150+ Programs</span>
+                            </div>
+                            <div class="visual-floating-badge badge-2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16"
+                                    height="16">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>30,000+ Students</span>
+                            </div>
+                            <div class="visual-floating-badge badge-3">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16"
+                                    height="16">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Vadodara, Gujarat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT AR/VR PLATFORM ========== -->
+    <section id="about-platform" class="section section-about-platform">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Platform</span>
+                <h2 class="section-title">What This Platform Provides</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="platform-grid">
+                <div class="platform-visual reveal-left">
+                    <div class="platform-mockup">
+                        <div class="mockup-browser">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-content">
+                                <div class="mockup-pano-ring">
+                                    <svg viewBox="0 0 120 120" fill="none">
+                                        <circle cx="60" cy="60" r="55" stroke="url(#grad2)" stroke-width="2"
+                                            stroke-dasharray="6 4" opacity="0.4">
+                                            <animateTransform attributeName="transform" type="rotate" from="0 60 60"
+                                                to="360 60 60" dur="30s" repeatCount="indefinite" />
+                                        </circle>
+                                        <circle cx="60" cy="60" r="40" stroke="url(#grad2)" stroke-width="1.5"
+                                            opacity="0.6" />
+                                        <text x="60" y="56" text-anchor="middle" fill="url(#grad2)" font-size="11"
+                                            font-weight="600" font-family="Inter">360°</text>
+                                        <text x="60" y="70" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                                            font-size="8" font-family="Inter">VIRTUAL TOUR</text>
+                                        <defs>
+                                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#1E2A78" />
+                                                <stop offset="100%" style="stop-color:#F4B400" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="mockup-hotspot h1"></div>
+                                <div class="mockup-hotspot h2"></div>
+                                <div class="mockup-hotspot h3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-content reveal-right">
+                    <p class="about-text">
+                        This AR/VR Campus Navigation platform is designed to provide an immersive 360° virtual
+                        exploration of Parul University. It allows students, parents, and visitors to explore different
+                        campus locations digitally before physically visiting the university.
+                    </p>
+                    <p class="about-text">
+                        Through interactive 360° panoramic scenes and smart navigation hotspots, users can move between
+                        buildings, understand campus layout, and access important location information easily.
+                    </p>
+                    <p class="about-text">
+                        The system enhances accessibility, reduces confusion, and introduces a futuristic digital
+                        navigation experience.
+                    </p>
+                    <div class="platform-features-mini">
+                        <div class="pf-item">
+                            <div class="pf-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <span>Interactive 360° panoramas</span>
+                        </div>
+                        <div class="pf-item">
+                            <div class="pf-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <span>Smart navigation hotspots</span>
+                        </div>
+                        <div class="pf-item">
+                            <div class="pf-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <span>Location-based information</span>
+                        </div>
+                        <div class="pf-item">
+                            <div class="pf-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <span>Works on any device</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== KEY FEATURES ========== -->
+    <section id="features" class="section section-features">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Key Features</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card reveal-up" style="--delay: 0s">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">360° Immersive Campus View</h3>
+                    <p class="feature-desc">Explore every corner of the campus with high-quality 360° panoramic imagery
+                        for a truly immersive experience.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card reveal-up" style="--delay: 0s">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Interactive Hotspot Navigation</h3>
+                    <p class="feature-desc">Click on smart hotspots to seamlessly navigate between different campus
+                        buildings and locations.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card reveal-up" style="--delay: 0s">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smooth Scene Transitions</h3>
+                    <p class="feature-desc">Experience fluid and cinematic transitions as you move between different
+                        panoramic scenes and viewpoints.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card reveal-up" style="--delay: 0s">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Information Popups</h3>
+                    <p class="feature-desc">Access detailed information about each campus location through interactive
+                        popup cards with images and descriptions.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card reveal-up" style="--delay: 0s">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Mobile & Desktop Responsive</h3>
+                    <p class="feature-desc">Enjoy a seamless experience across all devices — from desktop computers to
+                        tablets and smartphones.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card reveal-up" style="--delay: 0s">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">User-Friendly Interface</h3>
+                    <p class="feature-desc">Navigate effortlessly with an intuitive interface designed for users of all
+                        ages and technical backgrounds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CALL TO ACTION ========== -->
+    <section id="cta" class="section section-cta">
+        <div class="cta-bg-effects">
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+        </div>
+        <div class="section-container">
+            <div class="cta-content reveal-up">
+                <h2 class="cta-title">Start Exploring the Campus Today</h2>
+                <p class="cta-subtitle">Dive into an immersive 360° virtual tour of Parul University and discover the
+                    campus like never before.</p>
+                <a href="index.html" class="btn btn-primary btn-large" id="ctaEnterBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="btn-icon">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="10 8 16 12 10 16 10 8" />
+                    </svg>
+                    Enter 360° Experience
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/parul university.png" alt="Parul University" class="pu-footer-logo">
+            </div>
+            <p class="footer-title">PARUL UNIVERSITY AR/VR NAVIGATION PROJECT</p>
+            <p class="footer-desc">Designed for immersive campus exploration</p>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">&copy; 2026 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

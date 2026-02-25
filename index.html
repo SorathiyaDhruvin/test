@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Immersive 360° Virtual Campus Tour — Extended Reality Lab & Network Architecture Lab">
+    <title>360° Virtual Campus Tour</title>
+
+    <!-- Pannellum -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== LOADING SCREEN ========== -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring inner"></div>
+                <div class="spinner-dot"></div>
+            </div>
+            <p class="loader-title">360° campus tour</p>
+            <p class="loader-sub">Preparing your experience…</p>
+            <div class="loader-track">
+                <div class="loader-fill" id="loaderFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TOP NAVIGATION BAR ========== -->
+    <nav id="topBar" class="top-bar">
+        <!-- Left: Logo -->
+        <div class="top-left">
+            <a href="home.html" class="logo-link" title="Home Page">
+                <img src="assets/parul university.png" alt="Parul University" class="pu-tour-logo">
+            </a>
+        </div>
+
+
+
+        <!-- Right: Icon buttons -->
+        <div class="top-right">
+            <button class="icon-btn" id="btnNavGuide" title="Indoor Navigation (N)" aria-label="Indoor Navigation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                </svg>
+            </button>
+            <button class="icon-btn" id="btnGrid" title="Grid View (G)" aria-label="Grid view">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+            </button>
+            <button class="icon-btn" id="btnFullscreen" title="Fullscreen (F)" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                        d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                </svg>
+            </button>
+            <button class="icon-btn" id="btnHelp" title="Help (H)" aria-label="Help">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== PANORAMA VIEWER ========== -->
+    <div id="panorama"></div>
+
+    <!-- ========== INDOOR NAVIGATION PANEL ========== -->
+    <div class="nav-guide-panel" id="navGuidePanel">
+        <div class="nav-guide-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" class="nav-guide-icon">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span class="nav-guide-title">Navigate To</span>
+            <button class="nav-guide-close" id="navGuideClose" aria-label="Close navigator">&times;</button>
+        </div>
+        <div class="nav-guide-body">
+            <div class="nav-guide-select-group">
+                <label for="floorSelect" class="nav-guide-label">Floor</label>
+                <select id="floorSelect" class="nav-guide-select">
+                    <option value="">Select Floor</option>
+                </select>
+            </div>
+            <div class="nav-guide-select-group">
+                <label for="labSelect" class="nav-guide-label">Destination</label>
+                <select id="labSelect" class="nav-guide-select" disabled>
+                    <option value="">Select Destination</option>
+                </select>
+            </div>
+            <div class="nav-guide-coming-soon" id="navComingSoon" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                </svg>
+                <span class="coming-soon-text">Coming Soon</span>
+                <span class="coming-soon-sub">360° images for this floor are being captured. Navigation will be
+                    available once uploaded.</span>
+            </div>
+            <div class="nav-guide-actions">
+                <button class="nav-guide-btn nav-guide-go" id="navGuideGo" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16"
+                        height="16">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    Show Path
+                </button>
+                <button class="nav-guide-btn nav-guide-clear" id="navGuideClear" style="display:none;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Direction guidance banner -->
+    <div class="direction-banner" id="directionBanner">
+        <div class="direction-banner-inner">
+            <div class="direction-step-indicator">
+                <span class="direction-step-num" id="dirStepNum">1</span>
+                <span class="direction-step-total" id="dirStepTotal">/ 3</span>
+            </div>
+            <div class="direction-text-wrap">
+                <span class="direction-instruction" id="dirInstruction">Go straight ahead</span>
+                <span class="direction-destination" id="dirDestination">→ L-107 XR Lab</span>
+            </div>
+            <div class="direction-nav-btns">
+                <button class="direction-nav-btn" id="dirPrev" aria-label="Previous step">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16"
+                        height="16">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+                <button class="direction-nav-btn" id="dirNext" aria-label="Next step">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16"
+                        height="16">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== BOTTOM-LEFT INFO BOX ========== -->
+    <div class="info-box" id="infoBox">
+        <span class="info-box-text" id="infoBoxText">Loading…</span>
+    </div>
+
+    <!-- ========== GRID VIEW — RIGHT PANEL ========== -->
+    <div class="panel-overlay" id="gridOverlay">
+        <div class="panel-right scenes-panel" id="gridPanel">
+            <button class="panel-close" id="gridClose" aria-label="Close">&times;</button>
+            <div class="panel-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    style="width:20px;height:20px;flex-shrink:0;">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+                <h3>All Scenes</h3>
+            </div>
+            <div class="grid-body" id="gridBody"></div>
+        </div>
+    </div>
+
+    <!-- ========== INFO POPUP (for hotspot details — stays centered) ========== -->
+    <div id="infoPopup" class="modal-overlay info-popup-overlay">
+        <div class="info-popup">
+            <button class="panel-close" id="popupClose" aria-label="Close">&times;</button>
+            <div class="popup-img-wrap" id="popupImgWrap">
+                <img id="infoImage" src="" alt="">
+            </div>
+            <div class="popup-body">
+                <h2 id="infoTitle"></h2>
+                <p id="infoDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HELP — RIGHT PANEL ========== -->
+    <div class="panel-overlay" id="helpOverlay">
+        <div class="panel-right help-panel" id="helpPanel">
+            <button class="panel-close" id="helpClose" aria-label="Close">&times;</button>
+            <div class="panel-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    style="width:22px;height:22px;flex-shrink:0;opacity:.7;">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+                <h3>How to Navigate</h3>
+            </div>
+            <div class="help-list">
+                <div class="help-row">
+                    <span class="help-label">🖱️ Click &amp; Drag</span>
+                    <span class="help-value">Look around the panorama</span>
+                </div>
+                <div class="help-row">
+                    <span class="help-label">🔍 Scroll / Pinch</span>
+                    <span class="help-value">Zoom in and out</span>
+                </div>
+                <div class="help-row">
+                    <span class="help-label">➡️ Arrow Hotspots</span>
+                    <span class="help-value">Navigate between scenes</span>
+                </div>
+                <div class="help-row">
+                    <span class="help-label">ℹ️ Info Icons</span>
+                    <span class="help-value">View scene details</span>
+                </div>
+            </div>
+            <h4 class="help-sub">Keyboard Shortcuts</h4>
+            <div class="shortcut-grid">
+                <div class="sc"><kbd>N</kbd> Navigate</div>
+                <div class="sc"><kbd>G</kbd> Grid View</div>
+                <div class="sc"><kbd>H</kbd> Help</div>
+                <div class="sc"><kbd>F</kbd> Fullscreen</div>
+                <div class="sc"><kbd>Esc</kbd> Close</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

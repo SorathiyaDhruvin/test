@@ -1,0 +1,397 @@
+{
+  "default": {
+    "firstScene": "scene1",
+    "sceneFadeDuration": 0,
+    "autoLoad": true,
+    "compass": true
+  },
+  "scenes": {
+    "scene1": {
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/L-107 lab1.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -87,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene4",
+            "targetYaw": 180
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 5,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene2",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": 19,
+          "yaw": 63,
+          "type": "info",
+          "text": "L-106 IOT Lab",
+          "clickHandlerArgs": {
+            "title": "L-106 IOT Lab",
+            "description": "The Internet of Things Lab features Arduino boards, Raspberry Pi devices, sensors, and smart device components for hands-on IoT development and research."
+          }
+        },
+        {
+          "pitch": 30,
+          "yaw": -30,
+          "type": "info",
+          "text": "L-107 Extended Reality & Game Development Lab",
+          "clickHandlerArgs": {
+            "title": "L-107 Extended Reality & Game Development Lab",
+            "description": "The Extended Reality & Game Development Lab is a specialized facility designed for hands-on learning and research in Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR). The lab is equipped with advanced XR devices such as Microsoft HoloLens and Meta VR headsets, high-performance systems, and development tools used for creating immersive applications and games.This lab enables students to work on real-time game development, 3D visualization, interactive simulations, and virtual walkthroughs. It supports learning in areas like Unity/Unreal game engines, XR application development, human–computer interaction, and immersive technology research. The lab plays a key role in enhancing practical skills, innovation, and industry-ready experience in extended reality and game development domains."
+          }
+        }
+      ]
+    },
+    "scene2": {
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/L-107 lab2.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -6,
+          "yaw": 80,
+          "type": "info",
+          "text": "VR headset",
+          "clickHandlerArgs": {
+            "title": "VR Headsets",
+            "description": "Meta Quest headsets are fully immersive virtual reality (VR) devices designed for gaming, development, and training applications. They provide high-resolution displays, motion-tracked controllers, and spatial audio to create realistic virtual environments. These headsets are commonly used for VR game development, virtual simulations, interactive learning, and XR research. Meta Quest devices support standalone operation as well as PC-based development, making them ideal for testing and building immersive VR experiences.",
+            "image": "assets/meta.png"
+          }
+        },
+        {
+          "pitch": -6,
+          "yaw": 70,
+          "type": "info",
+          "text": "hololens",
+          "clickHandlerArgs": {
+            "title": "Hololens",
+            "description": "Microsoft HoloLens is a mixed reality (MR) headset that blends digital holograms with the real world. Unlike traditional VR, it allows users to see and interact with virtual 3D objects while remaining aware of their physical surroundings. HoloLens is widely used in education, research, engineering, healthcare, and industrial training for tasks such as 3D visualization, simulation, remote assistance, and collaborative development. It enables hands-free interaction using gestures, voice commands, and eye tracking.",
+            "image": "assets/hololens.png"
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -100,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene1",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene3",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene3": {
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/L-107 lab3.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene2",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene4": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/L-108 lab1.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 2,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene1",
+            "targetYaw": 2
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene5",
+            "targetYaw": 180
+          }
+        },
+        {
+          "pitch": -2,
+          "yaw": 155,
+          "type": "info",
+          "text": "Data Center",
+          "clickHandlerArgs": {
+            "title": "Data Center",
+            "description": "The College Data Center is a centralized facility that supports the digital and academic operations of the institution. It manages essential IT infrastructure such as servers, storage systems, networking equipment, and databases used for learning management systems, student records, online examinations, and research activities. The data center ensures secure data storage, reliable network connectivity, and uninterrupted access to academic resources. It also provides students with exposure to real-world data management, server administration, cloud computing, and cybersecurity concepts, helping them understand how modern educational and enterprise IT systems operate.",
+            "image": "assets/data center.jpg"
+          }
+        }
+      ]
+    },
+    "scene5": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/L-108 lab2.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 200,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 182,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene10",
+            "targetYaw": 182
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 2,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene4",
+            "targetYaw": 2
+          }
+        },
+        {
+          "pitch": 15,
+          "yaw": -150,
+          "type": "info",
+          "text": "L-108 Network Architecture Lab",
+          "clickHandlerArgs": {
+            "title": "L-108 Network Architecture Lab",
+            "description": "The Network Architecture Lab is a specialized facility designed for hands-on learning and research in network design, configuration, and management. It provides students with practical experience in setting up, configuring, and troubleshooting network infrastructure. The lab includes advanced network devices, routers, switches, and servers, along with tools for network analysis and security testing. Students can simulate real-world network scenarios, learn about different network topologies, and develop skills in network planning, implementation, and optimization. This lab is essential for preparing students for careers in network engineering, cybersecurity, and IT infrastructure management.",
+            "image": "assets/Network_architecture.png"
+          }
+        },
+        {
+          "pitch": -1,
+          "yaw": 38,
+          "type": "info",
+          "text": "Data Center",
+          "clickHandlerArgs": {
+            "title": "Data Center",
+            "description": "The College Data Center is a centralized facility that supports the digital and academic operations of the institution. It manages essential IT infrastructure such as servers, storage systems, networking equipment, and databases used for learning management systems, student records, online examinations, and research activities. The data center ensures secure data storage, reliable network connectivity, and uninterrupted access to academic resources. It also provides students with exposure to real-world data management, server administration, cloud computing, and cybersecurity concepts, helping them understand how modern educational and enterprise IT systems operate.",
+            "image": "assets/data center.jpg"
+          }
+        }
+      ]
+    },
+    "scene6": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/L-108 lab3.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 200,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene10",
+            "targetYaw": 180
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 150,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene5",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene7",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene7": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/L-108 lab4.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene8",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene8": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/L-108 lab5.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene9",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene7",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene9": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/L-108 lab6.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene8",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene10": {
+      "title": "Seminar Hall",
+      "panorama": "assets/seminar hall.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 182,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene11",
+            "targetYaw": 182
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 5,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene5",
+            "targetYaw": 5
+          }
+        },
+        {
+          "pitch": -5,
+          "yaw": -15,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene7",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene11": {
+      "title": "Seminar Hall",
+      "panorama": "assets/FanArea.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": -5,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene10",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch":-10,
+          "yaw":-185,
+          "cssClass":"nav-btn animate-bounce-up",
+          "clickHandlerArgs":{
+            "sceneId":"scene12",
+            "targetYaw":0
+          }
+        }
+      ]
+    },
+    "scene12":{
+      "title":"Way near lift",
+      "panorama":"assets/Way near lift.jpg",
+      "hfov":110,
+      "northoffset":0,
+      "hotSpots":[
+        {
+          "pitch":-10,
+          "yaw":-180,
+          "cssClass":"nav-btn animate-bounce-up",
+          "clickHandlerArgs":{
+          "sceneId":"scene13",
+          "targetYaw":0
+        }
+      }
+      ]
+    }
+  }
+}
