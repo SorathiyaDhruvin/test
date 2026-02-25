@@ -98,7 +98,7 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10;
     padding: 20px 0;
     /* Min 20px top padding as requested */
     transition: var(--transition-base);
@@ -187,54 +187,165 @@ img {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hamburger */
-.nav-hamburger {
+/* ===================================================
+   MOBILE HAMBURGER BUTTON
+   =================================================== */
+.mobile-hamburger {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    background: none;
-    border: none;
+    width: 42px;
+    height: 42px;
+    background: rgba(30, 42, 120, 0.06);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    padding: 6px;
-    z-index: 1001;
+    padding: 0;
+    transition: var(--transition-base);
+    flex-shrink: 0;
 }
 
-.hamburger-line {
-    width: 24px;
+.mobile-hamburger:hover {
+    background: rgba(30, 42, 120, 0.1);
+}
+
+.hamburger-bar {
+    display: block;
+    width: 20px;
     height: 2px;
-    background: #000000;
-    /* White lines for dark header */
+    background: var(--accent-navy);
     border-radius: 2px;
     transition: var(--transition-base);
-    transform-origin: center;
 }
 
-.nav-hamburger.active .hamburger-line:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+/* ===================================================
+   MOBILE OVERLAY
+   =================================================== */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
-.nav-hamburger.active .hamburger-line:nth-child(2) {
+.mobile-overlay.active {
     opacity: 1;
-    transform: scaleX(0);
+    visibility: visible;
 }
 
-.nav-hamburger.active .hamburger-line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+/* ===================================================
+   MOBILE SIDEBAR
+   =================================================== */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 290px;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh;
+    background: linear-gradient(180deg, #1E2A78 0%, #151D5A 100%);
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80%;
-  height: 100vh;
-  background: #1e2a78;
-  z-index: 1001;   /* VERY IMPORTANT */
+.mobile-sidebar.open {
+    transform: translateX(0);
 }
-.logo {
-  position: relative;
-  z-index: 10;   /* Keep small */
+
+/* Close Button */
+.sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition-base);
+    padding: 0;
 }
+
+.sidebar-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Sidebar Links */
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 90px 28px 40px;
+}
+
+.sidebar-link {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-base);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.sidebar-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 22px;
+}
+
+.sidebar-link.active {
+    color: #F4B400;
+    font-weight: 600;
+}
+
+.sidebar-cta {
+    background: #D32F2F;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--radius-md);
+    margin-top: 16px;
+    padding: 14px 24px;
+}
+
+.sidebar-cta:hover {
+    background: #C62828;
+    padding-left: 24px;
+}
+
+/* Body scroll lock when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
 /* ===================================================
    HERO SECTION
    =================================================== */
@@ -1306,50 +1417,15 @@ img {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .nav-hamburger {
+
+    /* Show hamburger on mobile */
+    .mobile-hamburger {
         display: flex;
-        background-color: #F5F7FA;
-        color: #1A1A1A;
     }
 
+    /* Hide desktop nav menu on mobile */
     .nav-menu {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 280px;
-        height: 100vh;
-        height: 100dvh;
-        background: #1E2A78;
-        /* Dark blue menu to match header */
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 90px 32px 40px;
-        gap: 4px;
-        transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        border-left: 1px solid rgba(255, 255, 255, 0.08);
-        z-index: 1100;
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
-        overflow-y: auto;
-        overscroll-behavior: contain;
-    }
-
-    .nav-menu.open {
-        transform: translateX(0);
-    }
-
-    .nav-link {
-        width: 100%;
-        padding: 14px 16px;
-        font-size: 0.95rem;
-        color: var(--bg-alt);
-    }
-
-    .nav-cta-link {
-        margin-left: 0;
-        margin-top: 12px;
-        text-align: center;
-        justify-content: center;
+        display: none;
     }
 
     .pu-header-logo {
