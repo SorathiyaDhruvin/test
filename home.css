@@ -127,13 +127,7 @@ img {
     justify-content: space-between;
 }
 
-/* Logo */
-.nav-logo {
-    display: flex;
-    align-items: center;
-    z-index: 1001;
-    padding-top: 0;
-}
+
 
 .pu-header-logo {
     height: 60px;
@@ -228,6 +222,19 @@ img {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  background: #1e2a78;
+  z-index: 1001;   /* VERY IMPORTANT */
+}
+.logo {
+  position: relative;
+  z-index: 10;   /* Keep small */
+}
 /* ===================================================
    HERO SECTION
    =================================================== */
@@ -1311,19 +1318,20 @@ img {
         right: 0;
         width: 280px;
         height: 100vh;
+        height: 100dvh;
         background: #1E2A78;
         /* Dark blue menu to match header */
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: flex-start;
         padding: 90px 32px 40px;
         gap: 4px;
         transform: translateX(100%);
-        transition: var(--transition-smooth);
-        border-left: 1px solid var(--border-light);
-        z-index: 1000;
-        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 1100;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     .nav-menu.open {
