@@ -1,0 +1,645 @@
+{
+    "settings": {
+        "defaultScene": 1,
+        "bufferSize": 5,
+        "preloadCount": 2,
+        "imageBasePath": "assets/ground floor/",
+        "imageExtension": ".jpg"
+    },
+    "scenes": [
+        {
+            "id": 1,
+            "title": "CV Raman Center – Entrance",
+            "image": "photo1.jpg",
+            "next": [
+                2
+            ],
+            "prev": []
+        },
+        {
+            "id": 2,
+            "title": "CV Raman Center – Lobby",
+            "image": "photo2.jpg",
+            "next": [
+                3
+            ],
+            "prev": [
+                1
+            ]
+        },
+        {
+            "id": 3,
+            "title": "CV Raman Center – Corridor A",
+            "image": "photo3.jpg",
+            "next": [
+                4
+            ],
+            "prev": [
+                2
+            ]
+        },
+        {
+            "id": 4,
+            "title": "CV Raman Center – Junction",
+            "image": "photo4.jpg",
+            "next": [
+                5
+            ],
+            "prev": [
+                3
+            ]
+        },
+        {
+            "id": 5,
+            "title": "CV Raman Center – Corridor B",
+            "image": "photo5.jpg",
+            "next": [
+                6
+            ],
+            "prev": [
+                4
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Way to AI Lab",
+            "image": "photo6.jpg",
+            "next": [
+                7
+            ],
+            "prev": [
+                5
+            ]
+        },
+        {
+            "id": 7,
+            "title": "AI Lab Approach",
+            "image": "photo7.jpg",
+            "next": [
+                8
+            ],
+            "prev": [
+                6
+            ]
+        },
+        {
+            "id": 8,
+            "title": "AI Lab Entrance",
+            "image": "photo8.jpg",
+            "next": [
+                9
+            ],
+            "prev": [
+                7
+            ]
+        },
+        {
+            "id": 9,
+            "title": "AI Lab Interior",
+            "image": "photo9.jpg",
+            "next": [
+                10
+            ],
+            "prev": [
+                8
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Corridor C",
+            "image": "photo10.jpg",
+            "next": [
+                11
+            ],
+            "prev": [
+                9
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Corridor C – Mid",
+            "image": "photo11.jpg",
+            "next": [
+                12
+            ],
+            "prev": [
+                10
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Lab Section A",
+            "image": "photo12.jpg",
+            "next": [
+                13
+            ],
+            "prev": [
+                11
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Lab Section A – Interior",
+            "image": "photo13.jpg",
+            "next": [
+                14
+            ],
+            "prev": [
+                12
+            ]
+        },
+        {
+            "id": 14,
+            "title": "Lab Section B",
+            "image": "photo14.jpg",
+            "next": [
+                15
+            ],
+            "prev": [
+                13
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Lab Section B – Interior",
+            "image": "photo15.jpg",
+            "next": [
+                16
+            ],
+            "prev": [
+                14
+            ]
+        },
+        {
+            "id": 16,
+            "title": "Corridor D",
+            "image": "photo16.jpg",
+            "next": [
+                17
+            ],
+            "prev": [
+                15
+            ]
+        },
+        {
+            "id": 17,
+            "title": "Corridor D – Mid",
+            "image": "photo17.jpg",
+            "next": [
+                18
+            ],
+            "prev": [
+                16
+            ]
+        },
+        {
+            "id": 18,
+            "title": "Lab Section C",
+            "image": "photo18.jpg",
+            "next": [
+                19
+            ],
+            "prev": [
+                17
+            ]
+        },
+        {
+            "id": 19,
+            "title": "Lab Section C – Interior",
+            "image": "photo19.jpg",
+            "next": [
+                20
+            ],
+            "prev": [
+                18
+            ]
+        },
+        {
+            "id": 20,
+            "title": "Corridor E",
+            "image": "photo20.jpg",
+            "next": [
+                21
+            ],
+            "prev": [
+                19
+            ]
+        },
+        {
+            "id": 21,
+            "title": "Corridor E – Mid",
+            "image": "photo21.jpg",
+            "next": [
+                22
+            ],
+            "prev": [
+                20
+            ]
+        },
+        {
+            "id": 22,
+            "title": "Lab Section D",
+            "image": "photo22.jpg",
+            "next": [
+                23
+            ],
+            "prev": [
+                21
+            ]
+        },
+        {
+            "id": 23,
+            "title": "Lab Section D – Interior",
+            "image": "photo23.jpg",
+            "next": [
+                24
+            ],
+            "prev": [
+                22
+            ]
+        },
+        {
+            "id": 24,
+            "title": "iOS Lab",
+            "image": "photo24.jpg",
+            "next": [
+                25
+            ],
+            "prev": [
+                23
+            ]
+        },
+        {
+            "id": 25,
+            "title": "iOS Lab – Interior",
+            "image": "photo25.jpg",
+            "next": [
+                26
+            ],
+            "prev": [
+                24
+            ]
+        },
+        {
+            "id": 26,
+            "title": "Corridor F",
+            "image": "photo26.jpg",
+            "next": [
+                27
+            ],
+            "prev": [
+                25
+            ]
+        },
+        {
+            "id": 27,
+            "title": "Corridor F – Mid",
+            "image": "photo27.jpg",
+            "next": [
+                28
+            ],
+            "prev": [
+                26
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Lab Section E",
+            "image": "photo28.jpg",
+            "next": [
+                29
+            ],
+            "prev": [
+                27
+            ]
+        },
+        {
+            "id": 29,
+            "title": "Lab Section E – Interior",
+            "image": "photo29.jpg",
+            "next": [
+                30
+            ],
+            "prev": [
+                28
+            ]
+        },
+        {
+            "id": 30,
+            "title": "Corridor G",
+            "image": "photo30.jpg",
+            "next": [
+                31
+            ],
+            "prev": [
+                29
+            ]
+        },
+        {
+            "id": 31,
+            "title": "Corridor G – Mid",
+            "image": "photo31.jpg",
+            "next": [
+                32
+            ],
+            "prev": [
+                30
+            ]
+        },
+        {
+            "id": 32,
+            "title": "Lab Section F",
+            "image": "photo32.jpg",
+            "next": [
+                33
+            ],
+            "prev": [
+                31
+            ]
+        },
+        {
+            "id": 33,
+            "title": "Lab Section F – Interior",
+            "image": "photo33.jpg",
+            "next": [
+                34
+            ],
+            "prev": [
+                32
+            ]
+        },
+        {
+            "id": 34,
+            "title": "Seminar Hall Approach",
+            "image": "photo34.jpg",
+            "next": [
+                35
+            ],
+            "prev": [
+                33
+            ]
+        },
+        {
+            "id": 35,
+            "title": "Seminar Hall",
+            "image": "photo35.jpg",
+            "next": [
+                36
+            ],
+            "prev": [
+                34
+            ]
+        },
+        {
+            "id": 36,
+            "title": "Corridor H",
+            "image": "photo36.jpg",
+            "next": [
+                37
+            ],
+            "prev": [
+                35
+            ]
+        },
+        {
+            "id": 37,
+            "title": "Corridor H – Mid",
+            "image": "photo37.jpg",
+            "next": [
+                38
+            ],
+            "prev": [
+                36
+            ]
+        },
+        {
+            "id": 38,
+            "title": "Lab Section G",
+            "image": "photo38.jpg",
+            "next": [
+                39
+            ],
+            "prev": [
+                37
+            ]
+        },
+        {
+            "id": 39,
+            "title": "Lab Section G – Interior",
+            "image": "photo39.jpg",
+            "next": [
+                40
+            ],
+            "prev": [
+                38
+            ]
+        },
+        {
+            "id": 40,
+            "title": "Corridor I",
+            "image": "photo40.jpg",
+            "next": [
+                41
+            ],
+            "prev": [
+                39
+            ]
+        },
+        {
+            "id": 41,
+            "title": "Corridor I – Mid",
+            "image": "photo41.jpg",
+            "next": [
+                42
+            ],
+            "prev": [
+                40
+            ]
+        },
+        {
+            "id": 42,
+            "title": "Lab Section H",
+            "image": "photo42.jpg",
+            "next": [
+                43
+            ],
+            "prev": [
+                41
+            ]
+        },
+        {
+            "id": 43,
+            "title": "Lab Section H – Interior",
+            "image": "photo43.jpg",
+            "next": [
+                44
+            ],
+            "prev": [
+                42
+            ]
+        },
+        {
+            "id": 44,
+            "title": "Data Center Approach",
+            "image": "photo44.jpg",
+            "next": [
+                45
+            ],
+            "prev": [
+                43
+            ]
+        },
+        {
+            "id": 45,
+            "title": "Data Center",
+            "image": "photo45.jpg",
+            "next": [
+                46
+            ],
+            "prev": [
+                44
+            ]
+        },
+        {
+            "id": 46,
+            "title": "Corridor J",
+            "image": "photo46.jpg",
+            "next": [
+                47
+            ],
+            "prev": [
+                45
+            ]
+        },
+        {
+            "id": 47,
+            "title": "Corridor J – Mid",
+            "image": "photo47.jpg",
+            "next": [
+                48
+            ],
+            "prev": [
+                46
+            ]
+        },
+        {
+            "id": 48,
+            "title": "Lab Section I",
+            "image": "photo48.jpg",
+            "next": [
+                49
+            ],
+            "prev": [
+                47
+            ]
+        },
+        {
+            "id": 49,
+            "title": "Lab Section I – Interior",
+            "image": "photo49.jpg",
+            "next": [
+                50
+            ],
+            "prev": [
+                48
+            ]
+        },
+        {
+            "id": 50,
+            "title": "Corridor K",
+            "image": "photo50.jpg",
+            "next": [
+                51
+            ],
+            "prev": [
+                49
+            ]
+        },
+        {
+            "id": 51,
+            "title": "Corridor K – Mid",
+            "image": "photo51.jpg",
+            "next": [
+                52
+            ],
+            "prev": [
+                50
+            ]
+        },
+        {
+            "id": 52,
+            "title": "Lab Section J",
+            "image": "photo52.jpg",
+            "next": [
+                53
+            ],
+            "prev": [
+                51
+            ]
+        },
+        {
+            "id": 53,
+            "title": "Lab Section J – Interior",
+            "image": "photo53.jpg",
+            "next": [
+                54
+            ],
+            "prev": [
+                52
+            ]
+        },
+        {
+            "id": 54,
+            "title": "Corridor L",
+            "image": "photo54.jpg",
+            "next": [
+                55
+            ],
+            "prev": [
+                53
+            ]
+        },
+        {
+            "id": 55,
+            "title": "Corridor L – Mid",
+            "image": "photo55.jpg",
+            "next": [
+                56
+            ],
+            "prev": [
+                54
+            ]
+        },
+        {
+            "id": 56,
+            "title": "Near System Support Cell",
+            "image": "photo56.jpg",
+            "next": [
+                57
+            ],
+            "prev": [
+                55
+            ]
+        },
+        {
+            "id": 57,
+            "title": "System Support Cell Approach",
+            "image": "photo57.jpg",
+            "next": [
+                58
+            ],
+            "prev": [
+                56
+            ]
+        },
+        {
+            "id": 58,
+            "title": "System Support Cell",
+            "image": "photo58.jpg",
+            "next": [],
+            "prev": [
+                57
+            ]
+        }
+    ]
+}

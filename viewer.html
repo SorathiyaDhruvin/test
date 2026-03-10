@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="High-performance 360° panorama virtual tour viewer with smart caching and smooth navigation">
+    <title>360° Panorama Virtual Tour</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <link href="viewer.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== LOADING SCREEN ========== -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-content">
+            <div class="loader-sphere"></div>
+            <div class="loader-text">Loading Panorama</div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar" id="loaderProgressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SCENE LOADING OVERLAY ========== -->
+    <div class="scene-loading-overlay" id="sceneLoadingOverlay">
+        <div class="scene-loader-spinner"></div>
+    </div>
+
+    <!-- ========== PANORAMA VIEWER ========== -->
+    <div id="viewer-container"></div>
+
+    <!-- ========== RETICLE ========== -->
+    <div class="reticle" id="reticle"></div>
+
+    <!-- ========== TOP BAR ========== -->
+    <nav class="top-bar" id="topBar">
+        <div class="top-bar-left">
+            <div class="brand-logo">360</div>
+            <div class="brand-text">
+                <span class="brand-title">Virtual Tour</span>
+                <span class="brand-subtitle">Panorama Viewer</span>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <button class="icon-btn" id="btnGrid" title="All Scenes (G)" aria-label="Scene Grid">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                    <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                    <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+            </button>
+            <button class="icon-btn" id="btnFullscreen" title="Fullscreen (F)" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+                    <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+                    <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+                    <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+                </svg>
+            </button>
+            <button class="icon-btn" id="btnShortcuts" title="Keyboard Shortcuts (?)" aria-label="Shortcuts">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== CACHE STATUS ========== -->
+    <div class="cache-status" id="cacheStatus">
+        <span class="cache-dot"></span>
+        <span id="cacheText">Cache: 0/5</span>
+    </div>
+
+    <!-- ========== SCENE INFO (Bottom Left) ========== -->
+    <div class="scene-info" id="sceneInfo">
+        <div class="scene-badge" id="sceneBadge">1</div>
+        <div class="scene-details">
+            <div class="scene-title" id="sceneTitle">Loading…</div>
+            <div class="scene-counter" id="sceneCounter">Scene 1 of 58</div>
+        </div>
+    </div>
+
+    <!-- ========== TIMELINE BAR ========== -->
+    <div class="timeline-bar" id="timelineBar">
+        <div class="timeline-fill" id="timelineFill"></div>
+    </div>
+
+    <!-- ========== NAVIGATION CONTROLS (Bottom Center) ========== -->
+    <div class="nav-controls" id="navControls">
+        <button class="nav-btn" id="btnFirst" title="First Scene (Home)" aria-label="First Scene">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="11 17 6 12 11 7" />
+                <polyline points="18 17 13 12 18 7" />
+            </svg>
+        </button>
+        <button class="nav-btn" id="btnPrev" title="Previous Scene (←)" aria-label="Previous Scene">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+        </button>
+
+        <div class="nav-divider"></div>
+
+        <div class="progress-dots" id="progressDots"></div>
+
+        <div class="nav-divider"></div>
+
+        <button class="nav-btn" id="btnNext" title="Next Scene (→)" aria-label="Next Scene">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+            </svg>
+        </button>
+        <button class="nav-btn" id="btnLast" title="Last Scene (End)" aria-label="Last Scene">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="13 17 18 12 13 7" />
+                <polyline points="6 17 11 12 6 7" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- ========== THUMBNAIL STRIP (Bottom Right) ========== -->
+    <div class="thumbnail-strip" id="thumbnailStrip"></div>
+
+    <!-- ========== GRID PANEL ========== -->
+    <div class="grid-panel-overlay" id="gridOverlay">
+        <div class="grid-panel">
+            <div class="grid-header">
+                <h3>All Scenes</h3>
+                <button class="grid-close-btn" id="gridClose" aria-label="Close">×</button>
+            </div>
+            <div class="grid-body" id="gridBody"></div>
+        </div>
+    </div>
+
+    <!-- ========== KEYBOARD SHORTCUTS ========== -->
+    <div class="shortcuts-tooltip" id="shortcutsPanel">
+        <div class="shortcuts-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <line x1="6" y1="8" x2="6.01" y2="8" />
+                <line x1="10" y1="8" x2="10.01" y2="8" />
+                <line x1="14" y1="8" x2="14.01" y2="8" />
+                <line x1="18" y1="8" x2="18.01" y2="8" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+                <line x1="6" y1="16" x2="6.01" y2="16" />
+                <line x1="18" y1="16" x2="18.01" y2="16" />
+            </svg>
+            Keyboard Shortcuts
+        </div>
+        <div class="shortcut-row"><span class="shortcut-label">Previous Scene</span><span class="shortcut-key">←</span>
+        </div>
+        <div class="shortcut-row"><span class="shortcut-label">Next Scene</span><span class="shortcut-key">→</span>
+        </div>
+        <div class="shortcut-row"><span class="shortcut-label">First Scene</span><span class="shortcut-key">Home</span>
+        </div>
+        <div class="shortcut-row"><span class="shortcut-label">Last Scene</span><span class="shortcut-key">End</span>
+        </div>
+        <div class="shortcut-row"><span class="shortcut-label">Toggle Fullscreen</span><span
+                class="shortcut-key">F</span></div>
+        <div class="shortcut-row"><span class="shortcut-label">Scene Grid</span><span class="shortcut-key">G</span>
+        </div>
+        <div class="shortcut-row"><span class="shortcut-label">This Help</span><span class="shortcut-key">?</span></div>
+        <div class="shortcut-row"><span class="shortcut-label">Close Panels</span><span class="shortcut-key">Esc</span>
+        </div>
+    </div>
+
+    <!-- ========== TOAST CONTAINER ========== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ========== THREE.JS CDN ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- ========== VIEWER SCRIPT ========== -->
+    <script src="viewer.js"></script>
+
+</body>
+
+</html>

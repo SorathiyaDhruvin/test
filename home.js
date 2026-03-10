@@ -43,33 +43,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightActiveLink, { passive: true });
 
-    // ---------- MOBILE MENU ----------
-    const hamburger = document.getElementById('navHamburger');
-    const navMenu = document.getElementById('navMenu');
+    // ---------- MOBILE SIDEBAR MENU ----------
+    const mobileHamburger = document.getElementById('mobileHamburger');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('open');
-        document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    const openMobileMenu = () => {
+        mobileSidebar.classList.add('open');
+        mobileOverlay.classList.add('active');
+        document.body.classList.add('menu-open');
+    };
+
+    const closeMobileMenu = () => {
+        mobileSidebar.classList.remove('open');
+        mobileOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    };
+
+    // Open menu on hamburger click
+    mobileHamburger.addEventListener('click', openMobileMenu);
+
+    // Close menu on close button click
+    sidebarClose.addEventListener('click', closeMobileMenu);
+
+    // Close menu on overlay click
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close menu on sidebar link click
+    mobileSidebar.querySelectorAll('.sidebar-link').forEach((link) => {
+        link.addEventListener('click', closeMobileMenu);
     });
 
-    // Close menu on link click
-    navMenu.querySelectorAll('.nav-link').forEach((link) => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Close menu on outside click
-    document.addEventListener('click', (e) => {
-        if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-    });
 
     // ---------- SMOOTH SCROLL FOR ANCHOR LINKS ----------
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

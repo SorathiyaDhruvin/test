@@ -7,26 +7,833 @@
   },
   "scenes": {
     "scene1": {
-      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
-      "panorama": "assets/L-107 lab1.jpg",
+      "title": "CV RAMAN CENTER ",
+      "panorama": "assets/ground floor/photo1.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
         {
           "pitch": -15,
-          "yaw": -87,
+          "yaw": 0,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
+            "sceneId": "scene2",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene2": {
+      "title": "CV RAMAN CENTER ",
+      "panorama": "assets/ground floor/photo2.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene3",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene1",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene3": {
+      "title": "CV RAMAN CENTER ",
+      "panorama": "assets/ground floor/photo3.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -10,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene54",
+            "targetYaw": 160
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 10,
+          "cssClass": "nav-btn animate-bounce-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -85,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene54",
+            "targetYaw": 160
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 92,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": -180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene2",
+            "targetYaw": -180
+          }
+        }
+      ]
+    },
+    "scene4": {
+      "title": "Way to System Support Cell",
+      "panorama": "assets/ground floor/photo57.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene5",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 190,
+          "cssClass": "nav-btn animate-bounce-upper-right",
+          "clickHandlerArgs": {
+            "sceneId": "scene54",
+            "targetYaw": -150
+          }
+        }
+      ]
+    },
+    "scene5": {
+      "title": "Way to System Support Cell ",
+      "panorama": "assets/ground floor/photo58.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -80,
+          "cssClass": "nav-btn animate-bounce-upper-right",
+          "clickHandlerArgs": {
             "sceneId": "scene4",
+            "targetYaw": -180
+          }
+        }
+      ]
+    },
+    "scene6": {
+      "title": "Way to IOS LAB ",
+      "panorama": "assets/ground floor/photo8.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -98,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene7",
+            "targetYaw": 90
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene9",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene3",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": -200,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene10",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene7": {
+      "title": "IOS LAB",
+      "panorama": "assets/ground floor/photo24.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene8",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
             "targetYaw": 180
           }
         },
         {
           "pitch": -15,
-          "yaw": 5,
+          "yaw": 90,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene2",
+            "sceneId": "scene29",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene8": {
+      "title": "IOS LAB",
+      "panorama": "assets/ground floor/photo25.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene7",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene26",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene9": {
+      "title": "Way to System Support Cell ",
+      "panorama": "assets/ground floor/photo9.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene19",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene13",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
+            "targetYaw": -180
+          }
+        }
+      ]
+    },
+    "scene10": {
+      "title": "L-102 ARTIFICIAL INTELLIGENCE & MACHINE LEARNING LAB ",
+      "panorama": "assets/ground floor/photo5.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 15,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene11",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -80,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene6",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene11": {
+      "title": "L-102 ARTIFICIAL INTELLIGENCE & MACHINE LEARNING LAB ",
+      "panorama": "assets/ground floor/photo6.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene12",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene10",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene12": {
+      "title": "L-102 ARTIFICIAL INTELLIGENCE & MACHINE LEARNING LAB ",
+      "panorama": "assets/ground floor/photo7.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 150,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene11",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene13": {
+      "title": "System Support Cell",
+      "panorama": "assets/ground floor/photo10.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene14",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 190,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene19",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene14": {
+      "title": "System Support Cell",
+      "panorama": "assets/ground floor/photo12.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene15",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene13",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene15": {
+      "title": "DATA CENTERE",
+      "panorama": "assets/ground floor/photo13.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 80,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene16",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene16": {
+      "title": "System Support Cell",
+      "panorama": "assets/ground floor/photo14.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene17",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene15",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene17": {
+      "title": "System Support Cell",
+      "panorama": "assets/ground floor/photo15.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene18",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene16",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene18": {
+      "title": "System Support Cell",
+      "panorama": "assets/ground floor/photo16.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene14",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene17",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene19": {
+      "title": "AWS LAB",
+      "panorama": "assets/ground floor/photo17.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene20",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -45,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene23",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene9",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene20": {
+      "title": "AWS LAB",
+      "panorama": "assets/ground floor/photo18.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene21",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 100,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene19",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene21": {
+      "title": "AWS LAB",
+      "panorama": "assets/ground floor/photo19.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene22",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene20",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene22": {
+      "title": "AWS LAB",
+      "panorama": "assets/ground floor/photo20.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene21",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene23": {
+      "title": "L-104 CYBAR SECURITY LAB",
+      "panorama": "assets/ground floor/photo21.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene24",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene19",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene24": {
+      "title": "L-104 CYBAR SECURITY LAB",
+      "panorama": "assets/ground floor/photo22.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene25",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene23",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene25": {
+      "title": "L-104 CYBAR SECURITY LAB",
+      "panorama": "assets/ground floor/photo23.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene24",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene26": {
+      "title": "IOS LAB",
+      "panorama": "assets/ground floor/photo26.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene27",
+            "targetYaw": 50
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene8",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene27": {
+      "title": "IOS LAB",
+      "panorama": "assets/ground floor/photo27.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -10,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene26",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene28",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene28": {
+      "title": "IOS LAB",
+      "panorama": "assets/ground floor/photo28.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -10,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene26",
+            "targetYaw": -90
+          }
+        }
+      ]
+    },
+    "scene29": {
+      "title": "Way to Network Architecture LAB",
+      "panorama": "assets/ground floor/photo29.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene30",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene38",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 95,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene7",
+            "targetYaw": -95
+          }
+        }
+      ]
+    },
+    "scene30": {
+      "title": "Way to L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/L-108 lab1.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene31",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene29",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene31": {
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/ground floor/photo30.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -95,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene30",
+            "targetYaw": 180
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -25,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene32",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 15,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene35",
             "targetYaw": 0
           }
         },
@@ -52,9 +859,9 @@
         }
       ]
     },
-    "scene2": {
+    "scene32": {
       "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
-      "panorama": "assets/L-107 lab2.jpg",
+      "panorama": "assets/ground floor/photo31.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -82,11 +889,11 @@
         },
         {
           "pitch": -15,
-          "yaw": -100,
+          "yaw": -90,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene1",
-            "targetYaw": -90
+            "sceneId": "scene31",
+            "targetYaw": 0
           }
         },
         {
@@ -94,32 +901,41 @@
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene3",
+            "sceneId": "scene33",
             "targetYaw": 0
           }
         }
       ]
     },
-    "scene3": {
+    "scene33": {
       "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
-      "panorama": "assets/L-107 lab3.jpg",
+      "panorama": "assets/ground floor/photo32.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
         {
           "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene34",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
           "yaw": 180,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene2",
+            "sceneId": "scene32",
             "targetYaw": 180
           }
         }
       ]
     },
-    "scene4": {
-      "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/L-108 lab1.jpg",
+    "scene34": {
+      "title": "L-107 EXTENDED REALITY & GAME DEVELOPMENT LAB",
+      "panorama": "assets/ground floor/photo33.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -128,54 +944,103 @@
           "yaw": 2,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene1",
-            "targetYaw": 2
-          }
-        },
-        {
-          "pitch": -10,
-          "yaw": 180,
-          "cssClass": "nav-btn animate-bounce-up",
-          "clickHandlerArgs": {
-            "sceneId": "scene5",
+            "sceneId": "scene33",
             "targetYaw": 180
-          }
-        },
-        {
-          "pitch": -2,
-          "yaw": 155,
-          "type": "info",
-          "text": "Data Center",
-          "clickHandlerArgs": {
-            "title": "Data Center",
-            "description": "The College Data Center is a centralized facility that supports the digital and academic operations of the institution. It manages essential IT infrastructure such as servers, storage systems, networking equipment, and databases used for learning management systems, student records, online examinations, and research activities. The data center ensures secure data storage, reliable network connectivity, and uninterrupted access to academic resources. It also provides students with exposure to real-world data management, server administration, cloud computing, and cybersecurity concepts, helping them understand how modern educational and enterprise IT systems operate.",
-            "image": "assets/data center.jpg"
           }
         }
       ]
     },
-    "scene5": {
-      "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/L-108 lab2.jpg",
+    "scene35": {
+      "title": "L-106 INTERNET OF THINGS INNOVATION LAB",
+      "panorama": "assets/ground floor/photo34.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
         {
           "pitch": -10,
-          "yaw": 200,
+          "yaw": 2,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene36",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene31",
+            "targetYaw": -90
+          }
+        }
+      ]
+    },
+    "scene36": {
+      "title": "L-106 INTERNET OF THINGS INNOVATION LAB",
+      "panorama": "assets/ground floor/photo35.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 2,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene37",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene35",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene37": {
+      "title": "L-106 INTERNET OF THINGS INNOVATION LAB",
+      "panorama": "assets/ground floor/photo36.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene36",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene38": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/ground floor/photo37.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": -80,
           "cssClass": "nav-btn animate-bounce-right",
           "clickHandlerArgs": {
-            "sceneId": "scene6",
+            "sceneId": "scene42",
             "targetYaw": 0
           }
         },
         {
           "pitch": -10,
-          "yaw": 182,
+          "yaw": -95,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene10",
-            "targetYaw": 182
+            "sceneId": "scene44",
+            "targetYaw": 0
           }
         },
         {
@@ -183,7 +1048,16 @@
           "yaw": 2,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene4",
+            "sceneId": "scene39",
+            "targetYaw": 180
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 88,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene29",
             "targetYaw": 2
           }
         },
@@ -211,44 +1085,61 @@
         }
       ]
     },
-    "scene6": {
+    "scene39": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/L-108 lab3.jpg",
+      "panorama": "assets/ground floor/photo38.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
         {
           "pitch": -10,
-          "yaw": 200,
-          "cssClass": "nav-btn animate-bounce-right",
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene10",
-            "targetYaw": 180
-          }
-        },
-        {
-          "pitch": -10,
-          "yaw": 150,
-          "cssClass": "nav-btn animate-bounce-left",
-          "clickHandlerArgs": {
-            "sceneId": "scene5",
+            "sceneId": "scene38",
             "targetYaw": 0
           }
         },
         {
           "pitch": -10,
-          "yaw": 0,
-          "cssClass": "nav-btn animate-bounce-right",
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene7",
+            "sceneId": "scene40",
+            "targetYaw": 180
+          }
+        }
+      ]
+    },
+    "scene40": {
+      "title": "L-108 Network Architecture Lab",
+      "panorama": "assets/ground floor/photo39.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene39",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene41",
             "targetYaw": 0
           }
         }
       ]
     },
-    "scene7": {
+    "scene41": {
       "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/L-108 lab4.jpg",
+      "panorama": "assets/ground floor/photo40.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -257,7 +1148,214 @@
           "yaw": 0,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene8",
+            "sceneId": "scene40",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene42": {
+      "title": "Seminar Hall",
+      "panorama": "assets/ground floor/photo42.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene43",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene44",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene43": {
+      "title": "Seminar Hall",
+      "panorama": "assets/ground floor/photo43.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene42",
+            "targetYaw": 0
+          }
+        }
+      ]
+    },
+    "scene44": {
+      "title": "Fan Area",
+      "panorama": "assets/ground floor/photo44.jpg",
+      "hfov": 110,
+      "northOffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene45",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 182,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene38",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene45": {
+      "title": "Way near lift",
+      "panorama": "assets/ground floor/photo45.jpg",
+      "hfov": 110,
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": -100,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene44",
+            "targetYaw": -180
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 85,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene4",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene54",
+            "targetYaw": 160
+          }
+        }
+      ]
+    },
+    "scene46": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo46.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene47",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -25,
+          "yaw": 95,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene54",
+            "targetYaw": -150
+          }
+        }
+      ]
+    },
+    "scene47": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo47.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene48",
+            "targetYaw": 180
+          }
+        },
+        {
+          "pitch": -20,
+          "yaw": 95,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene46",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene48": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo48.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -20,
+          "yaw": 85,
+          "cssClass": "nav-btn animate-bounce-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene47",
+            "targetYaw": 90
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 145,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene49",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -15,
+          "yaw": -145,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene51",
+            "targetYaw": -90
+          }
+        }
+      ]
+    },
+    "scene49": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo53.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 0,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene50",
             "targetYaw": 0
           }
         },
@@ -266,131 +1364,149 @@
           "yaw": 90,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene6",
-            "targetYaw": 180
+            "sceneId": "scene51",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 150,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene48",
+            "targetYaw": 0
           }
         }
       ]
     },
-    "scene8": {
-      "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/L-108 lab5.jpg",
+    "scene50": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo50.jpg",
       "hfov": 110,
-      "northOffset": 0,
+      "northoffset": 0,
       "hotSpots": [
         {
           "pitch": -10,
-          "yaw": 0,
+          "yaw": 95,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene9",
+            "sceneId": "scene49",
+            "targetYaw": 90
+          }
+        }
+      ]
+    },
+    "scene51": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo51.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": -90,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene52",
             "targetYaw": 0
           }
         },
         {
           "pitch": -10,
-          "yaw": 180,
+          "yaw": 90,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene7",
+            "sceneId": "scene48",
             "targetYaw": 90
           }
         }
       ]
     },
-    "scene9": {
-      "title": "L-108 Network Architecture Lab",
-      "panorama": "assets/L-108 lab6.jpg",
+    "scene52": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo52.jpg",
       "hfov": 110,
-      "northOffset": 0,
-      "hotSpots": [
-        {
-          "pitch": -10,
-          "yaw": 180,
-          "cssClass": "nav-btn animate-bounce-up",
-          "clickHandlerArgs": {
-            "sceneId": "scene8",
-            "targetYaw": 180
-          }
-        }
-      ]
-    },
-    "scene10": {
-      "title": "Seminar Hall",
-      "panorama": "assets/seminar hall.jpg",
-      "hfov": 110,
-      "northOffset": 0,
-      "hotSpots": [
-        {
-          "pitch": -10,
-          "yaw": 182,
-          "cssClass": "nav-btn animate-bounce-up",
-          "clickHandlerArgs": {
-            "sceneId": "scene11",
-            "targetYaw": 182
-          }
-        },
-        {
-          "pitch": -10,
-          "yaw": 5,
-          "cssClass": "nav-btn animate-bounce-up",
-          "clickHandlerArgs": {
-            "sceneId": "scene5",
-            "targetYaw": 5
-          }
-        },
-        {
-          "pitch": -5,
-          "yaw": -15,
-          "cssClass": "nav-btn animate-bounce-left",
-          "clickHandlerArgs": {
-            "sceneId": "scene7",
-            "targetYaw": 90
-          }
-        }
-      ]
-    },
-    "scene11": {
-      "title": "Seminar Hall",
-      "panorama": "assets/FanArea.jpg",
-      "hfov": 110,
-      "northOffset": 0,
+      "northoffset": 0,
       "hotSpots": [
         {
           "pitch": -10,
           "yaw": -5,
           "cssClass": "nav-btn animate-bounce-up",
           "clickHandlerArgs": {
-            "sceneId": "scene10",
+            "sceneId": "scene53",
             "targetYaw": 0
           }
         },
         {
-          "pitch":-10,
-          "yaw":-185,
-          "cssClass":"nav-btn animate-bounce-up",
-          "clickHandlerArgs":{
-            "sceneId":"scene12",
-            "targetYaw":0
+          "pitch": -10,
+          "yaw": 175,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene51",
+            "targetYaw": 90
           }
         }
       ]
     },
-    "scene12":{
-      "title":"Way near lift",
-      "panorama":"assets/Way near lift.jpg",
-      "hfov":110,
-      "northoffset":0,
-      "hotSpots":[
+    "scene53": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo54.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
         {
-          "pitch":-10,
-          "yaw":-180,
-          "cssClass":"nav-btn animate-bounce-up",
-          "clickHandlerArgs":{
-          "sceneId":"scene13",
-          "targetYaw":0
+          "pitch": -10,
+          "yaw": 180,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene52",
+            "targetYaw": 180
+          }
         }
-      }
+      ]
+    },
+    "scene54": {
+      "title": "Way to first floor",
+      "panorama": "assets/ground floor/photo49.jpg",
+      "hfov": 110,
+      "northoffset": 0,
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": -60,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene3",
+            "targetYaw": 90
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 178,
+          "cssClass": "nav-btn animate-bounce-upper-left",
+          "clickHandlerArgs": {
+            "sceneId": "scene46",
+            "targetYaw": 0
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 200,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene45",
+            "targetYaw": -90
+          }
+        },
+        {
+          "pitch": -10,
+          "yaw": 120,
+          "cssClass": "nav-btn animate-bounce-up",
+          "clickHandlerArgs": {
+            "sceneId": "scene4",
+            "targetYaw": 0
+          }
+        }
       ]
     }
   }
