@@ -104,7 +104,7 @@
     },
     "scene4": {
       "title": "Way to System Support Cell",
-      "panorama": "assets/ground floor/photo57.jpg",
+      "panorama": "assets/ground floor/photo55.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -132,14 +132,14 @@
           "cssClass": "nav-btn animate-bounce-upper-left",
           "clickHandlerArgs": {
             "sceneId": "scene45",
-            "targetYaw": -90
+            "targetYaw": 0
           }
         }
       ]
     },
     "scene5": {
       "title": "Way to System Support Cell ",
-      "panorama": "assets/ground floor/photo58.jpg",
+      "panorama": "assets/ground floor/photo56.jpg",
       "hfov": 110,
       "northOffset": 0,
       "hotSpots": [
@@ -1491,7 +1491,7 @@
         },
         {
           "pitch": -10,
-          "yaw": 178,
+          "yaw": 170,
           "cssClass": "nav-btn animate-bounce-upper-left",
           "clickHandlerArgs": {
             "sceneId": "scene46",
