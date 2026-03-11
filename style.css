@@ -529,6 +529,47 @@ body {
   animation: bLeft 2.2s infinite;
 }
 
+/* ── 45° Diagonal arrows (Google Street View style) ── */
+.animate-bounce-upper-left .arrow-img {
+  transform: rotate(-135deg);
+}
+
+.animate-bounce-upper-right .arrow-img {
+  transform: rotate(-45deg);
+}
+
+@keyframes bUpperLeft {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-10px, -10px);
+  }
+  60% {
+    transform: translate(-5px, -5px);
+  }
+}
+
+@keyframes bUpperRight {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(10px, -10px);
+  }
+  60% {
+    transform: translate(5px, -5px);
+  }
+}
+
+.animate-bounce-upper-left .hotspot-content {
+  animation: bUpperLeft 2.2s infinite;
+}
+
+.animate-bounce-upper-right .hotspot-content {
+  animation: bUpperRight 2.2s infinite;
+}
+
 .hidden-hotspot {
   display: none !important;
 }
